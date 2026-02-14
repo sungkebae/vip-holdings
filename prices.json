@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-02-14 22:35:21",
+  "updated_at": "2026-02-14 22:45:42",
   "market_open": false,
   "total_count": 63,
-  "active_count": 58,
+  "active_count": 57,
   "new_stock_days": 7,
   "holdings": [
     {
@@ -145,18 +145,18 @@
       "code": "226590",
       "name": "엠디바이스",
       "rec_date": "2026-02-09",
-      "buy_price": 26300,
+      "buy_price": 18810,
       "add_buy": 0,
-      "avg_price": 26300,
+      "avg_price": 18810,
       "cur_price": 26305,
-      "return_pct": 0.02,
-      "sell_1": "27500원(50%)",
-      "sell_2": "",
-      "sell_3": "",
-      "weight": "5~10%",
+      "return_pct": 39.85,
+      "sell_1": "26300",
+      "sell_2": "0",
+      "sell_3": "27500원(50%)",
+      "weight": "",
       "note": "",
-      "is_active": 1,
-      "is_new": true
+      "is_active": 0,
+      "is_new": false
     },
     {
       "code": "086390",
