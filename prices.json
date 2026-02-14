@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-15 03:44:13",
+  "updated_at": "2026-02-15 03:53:09",
   "market_open": false,
   "total_count": 51,
   "active_count": 46,
@@ -335,8 +335,8 @@
       "buy_price": 28250,
       "add_buy": 27450,
       "avg_price": 27850,
-      "cur_price": 0,
-      "return_pct": null,
+      "cur_price": 28050,
+      "return_pct": 0.72,
       "sell_1": "29500원(50%)",
       "sell_2": "31000원",
       "sell_3": "25% 보유",
