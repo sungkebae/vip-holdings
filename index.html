@@ -51,34 +51,16 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 
 /* 필터 버튼 */
 .fb{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
-.fbtn{background:var(--sf);border:1px solid var(--bd);color:var(--ts);padding:12px 24px;border-radius:8px;font-size:17px;font-family:inherit;cursor:pointer;font-weight:500;transition:all .2s}
-.fbtn:hover{border-color:var(--ac);color:var(--tx)}
-.fbtn.active{background:var(--ac);border-color:var(--ac);color:white;box-shadow:0 2px 6px rgba(37,99,235,.25)}
+.fb button{padding:8px 20px;border-radius:8px;border:1px solid var(--bd);background:var(--sf);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit;color:var(--tx)}
+.fb button.active,.fb button:hover{background:var(--tx);color:#fff;border-color:var(--tx)}
 
 /* =============================== */
-/* 🔥 신규 매수 섹션               */
+/* 🔥 신규 매수 섹션 (테이블 형식) */
 /* =============================== */
-.new-section{margin-bottom:32px}
-.new-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.new-section{margin-bottom:28px}
+.new-section .tw{border-left:3px solid var(--rd)}
 .new-badge{background:linear-gradient(135deg,#dc2626,#ea580c);color:white;padding:6px 16px;border-radius:8px;font-size:17px;font-weight:800;letter-spacing:1px}
 .new-sub{font-size:16px;color:var(--ts)}
-.new-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
-.new-card{background:linear-gradient(135deg,#fffbeb 0%,#fff 50%,#fef2f2 100%);border:2px solid rgba(220,38,38,.2);border-radius:16px;padding:24px;transition:all .2s;position:relative;overflow:hidden}
-.new-card:hover{border-color:var(--rd);box-shadow:0 4px 16px rgba(220,38,38,.1)}
-.new-card .nc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
-.new-card .nc-name{font-size:22px;font-weight:800}
-.new-card .nc-code{font-size:13px;color:var(--ts);margin-left:6px}
-.new-card .nc-date{font-size:14px;color:var(--ts);background:var(--sf);padding:3px 10px;border-radius:4px}
-.new-card .nc-prices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
-.new-card .nc-p{text-align:center;padding:10px;border-radius:8px;background:rgba(255,255,255,.8)}
-.new-card .nc-p-label{font-size:13px;color:var(--ts);margin-bottom:2px}
-.new-card .nc-p-value{font-size:18px;font-weight:700}
-.new-card .nc-ret{text-align:center;padding:12px;border-radius:10px;font-size:24px;font-weight:900}
-.nc-ret.pos{background:rgba(220,38,38,.06);color:var(--rd)}
-.nc-ret.neg{background:rgba(37,99,235,.06);color:var(--ac)}
-.nc-ret.neu{background:var(--sf);color:var(--ts)}
-.new-card .nc-sells{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-.nc-sell-tag{font-size:13px;padding:4px 10px;border-radius:4px;background:rgba(0,0,0,.05);color:var(--tx);font-weight:600}
 
 /* 테이블 */
 .section-header{display:flex;align-items:center;gap:10px;margin:28px 0 16px}
@@ -86,50 +68,64 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 .badge-active{background:rgba(37,99,235,.1);color:var(--ac)}
 .badge-closed{background:rgba(107,114,128,.1);color:var(--ts)}
 
-.tw{background:var(--sf);border:1px solid var(--bd);border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.tsc{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:17px}
-thead th{background:var(--sf2);padding:18px 14px;text-align:center;font-weight:600;font-size:15px;color:var(--ts);letter-spacing:.5px;border-bottom:1px solid var(--bd);white-space:nowrap;position:sticky;top:0;z-index:10}
-thead th.sell-hd{color:var(--gn)}
-tbody td{padding:16px 14px;border-bottom:1px solid rgba(216,219,229,.6);vertical-align:middle;white-space:nowrap;text-align:center}
-tbody tr{transition:background .15s}
-tbody tr:hover{background:rgba(37,99,235,.04)}
-tbody tr:last-child td{border-bottom:none}
-.rn{color:var(--tx);font-size:16px;font-weight:500}
-.sn{font-weight:700;color:var(--tx);font-size:18px}
-.scode{font-size:13px;color:var(--tx);margin-left:4px}
-.dc{color:var(--tx);font-size:17px}
-.avg-v{font-weight:700;color:var(--tx);font-size:17px}
-.rb{display:inline-flex;align-items:center;padding:6px 12px;border-radius:6px;font-size:18px;font-weight:800;min-width:90px;justify-content:center;background:transparent}
-.rb.pos{color:var(--rd)}.rb.neg{color:var(--ac)}.rb.neu{color:var(--ts)}
-.wt{display:inline-block;background:rgba(37,99,235,.08);color:var(--ac);padding:5px 12px;border-radius:4px;font-size:16px;font-weight:600}
-.nt{font-size:14px;color:var(--tx);max-width:150px;white-space:normal;line-height:1.4;text-align:left}
-.mh td{background:var(--sf2);padding:16px 14px;font-weight:700;font-size:18px;color:var(--ac);border-bottom:1px solid var(--bd);text-align:left}
+.tw{border:1px solid var(--bd);border-radius:14px;overflow:hidden;margin-bottom:24px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.tsc{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;min-width:1200px}
+thead th{background:var(--sf);padding:14px 10px;font-size:15px;font-weight:700;color:var(--ts);border-bottom:2px solid var(--bd);white-space:nowrap;position:sticky;top:0}
+tbody td{padding:14px 10px;font-size:15px;text-align:center;border-bottom:1px solid var(--sf2);white-space:nowrap}
+tbody tr:hover{background:rgba(37,99,235,.03)}
+
+/* 종목명 */
+.sn{font-size:18px;font-weight:800;color:var(--tx)}
+.scode{font-size:12px;color:var(--ts);margin-left:6px;font-weight:400}
+
+/* 수익률 뱃지 */
+.rb{display:inline-block;padding:5px 10px;border-radius:6px;font-weight:800;font-size:15px;min-width:70px;text-align:center}
+.rb.pos{background:rgba(220,38,38,.08);color:var(--rd)}
+.rb.neg{background:rgba(37,99,235,.08);color:var(--ac)}
+.rb.neu{background:var(--sf);color:var(--ts)}
+
+/* 평균단가 */
+.avg-v{font-weight:700;color:var(--tx)}
+
+/* 추천일 */
+.dc{color:var(--ts);font-size:14px}
+
+/* 번호 */
+.rn{font-weight:700;color:var(--ts);font-size:13px}
+
+/* 비중 */
+.wt{font-size:13px;padding:3px 8px;border-radius:4px;background:rgba(37,99,235,.08);color:var(--ac);font-weight:600}
+
+/* 비고 */
+.nt{font-size:13px;color:var(--ts);max-width:140px;white-space:normal;word-break:keep-all;text-align:left}
+
+/* 매도가 헤더 */
+.sell-hd{color:var(--gn) !important}
+
+/* 월 구분 헤더 */
+.mh td{background:var(--sf);font-weight:800;font-size:16px;padding:12px 16px !important;text-align:left !important;color:var(--tx);border-bottom:2px solid var(--bd)}
 
 /* 로딩 */
-.loading{text-align:center;padding:60px;color:var(--ts);font-size:18px}
-.loading-spin{display:inline-block;width:32px;height:32px;border:3px solid var(--bd);border-top-color:var(--ac);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:12px}
+.loading{text-align:center;padding:60px;color:var(--ts);font-size:16px}
+.loading-spin{display:inline-block;width:28px;height:28px;border:3px solid var(--sf2);border-top-color:var(--ac);border-radius:50%;animation:spin .6s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* 푸터 */
-.ft{text-align:center;padding:32px 0;color:var(--ts);font-size:14px;margin-top:32px}
-
+/* 반응형 */
 @media(max-width:768px){
 .ct{padding:16px 10px 60px}
-.hd h1{font-size:30px}
-.notice{padding:24px 18px}
-.notice-title{font-size:28px}
+.hd h1{font-size:28px}
+.hd-sub{font-size:16px}
+.notice{padding:28px 20px}
+.notice-title{font-size:24px}
 .notice-body{font-size:16px}
 .notice-body em{font-size:18px}
 .notice-quote{font-size:20px}
 .sm{grid-template-columns:repeat(2,1fr);gap:8px}
 .sc .vl{font-size:24px}
-.new-grid{grid-template-columns:1fr}
 thead th,tbody td{padding:12px 7px;font-size:14px}
 .rb{font-size:14px;min-width:65px;padding:4px 6px}
 .sn{font-size:16px}
-.new-card .nc-name{font-size:19px}
-.new-card .nc-ret{font-size:20px}
 }
 </style>
 </head>
@@ -142,43 +138,62 @@ thead th,tbody td{padding:12px 7px;font-size:14px}
 <div class="hd-sub">2025.12 ~ 2026.02</div>
 </div>
 
-<!-- 업데이트 시각 -->
+<!-- 업데이트 상태 -->
 <div class="update-bar">
 <span class="update-dot dot-closed" id="statusDot"></span>
-<span id="updateTime">데이터 로딩중...</span>
+<span id="updateTime">데이터 로딩 중...</span>
 </div>
 
 <!-- 프리미엄 공지 -->
 <div class="notice">
 <div class="notice-bar"></div>
-<div class="notice-title">수익실현 후 보유종목</div>
+<div class="notice-title">📋 VIP 이익실현 후 잔여 보유종목</div>
 <div class="notice-divider"></div>
 <div class="notice-body">
-수익실현 시점은 <em class="hl-gold">수익이 극대화된 구간</em>이며<br>
-지금 현재가는 <em class="hl-red">30% 물량 보유 상태</em>의 현재가 수익률입니다
+<em class="hl-red">1차 매도(50%~60%)</em> 이익실현 후<br>
+<em class="hl-gold">잔여 보유</em> 중인 종목을 정리한 페이지 입니다<br>
+실시간 현재가가 자동 반영됩니다
 </div>
-<div class="notice-date">※ 현재가는 자동 갱신됩니다 (장중 3분 주기)</div>
-<div class="notice-quote">" 대박수익은 인내에서 나온다 "</div>
+<div class="notice-quote">💎 "수익은 지키고, 기회는 잡는다"</div>
 </div>
 
 <!-- 통계 카드 -->
 <div class="sm">
-<div class="sc"><div class="lb">총 이익실현</div><div class="vl gold" id="totalC">-</div><div class="sb" id="totalS">로딩중</div></div>
-<div class="sc"><div class="lb">평균 수익률</div><div class="vl red" id="avgR">-</div><div class="sb" id="avgS">계산중</div></div>
-<div class="sc"><div class="lb">수익 종목</div><div class="vl red" id="profC">-</div><div class="sb" id="profS">계산중</div></div>
-<div class="sc"><div class="lb">최고 수익률</div><div class="vl red" id="maxR">-</div><div class="sb" id="maxS">계산중</div></div>
+<div class="sc"><div class="lb">전체 추천</div><div class="vl blue" id="totalC">-</div><div class="sb" id="totalS">-</div></div>
+<div class="sc"><div class="lb">평균 수익률</div><div class="vl red" id="avgR">-</div><div class="sb" id="avgS">-</div></div>
+<div class="sc"><div class="lb">수익 종목</div><div class="vl green" id="profC">-</div><div class="sb" id="profS">-</div></div>
+<div class="sc"><div class="lb">최고 수익</div><div class="vl gold" id="maxR">-</div><div class="sb" id="maxS">-</div></div>
 </div>
 
 <!-- 필터 버튼 -->
 <div class="fb" id="filterBtns"></div>
 
-<!-- 🔥 신규 매수 섹션 -->
+<!-- 🔥 신규 매수 섹션 (테이블 형식) -->
 <div class="new-section" id="newSection" style="display:none">
-<div class="new-header">
+<div class="section-header" style="margin-bottom:0">
 <span class="new-badge">🔥 신규 매수</span>
 <span class="new-sub" id="newSub">최근 7일 이내 추천</span>
 </div>
-<div class="new-grid" id="newGrid"></div>
+<div class="tw"><div class="tsc">
+<table>
+<thead><tr>
+<th>#</th>
+<th style="text-align:left">종목명</th>
+<th>추천일</th>
+<th>매수가</th>
+<th>추가매수</th>
+<th>평균단가</th>
+<th>현재가</th>
+<th>수익률</th>
+<th class="sell-hd">1차 매도</th>
+<th class="sell-hd">2차 매도</th>
+<th class="sell-hd">30% 보유</th>
+<th>비중</th>
+<th>비고</th>
+</tr></thead>
+<tbody id="tbNew"></tbody>
+</table>
+</div></div>
 </div>
 
 <!-- 📊 보유 중 테이블 -->
@@ -235,20 +250,13 @@ thead th,tbody td{padding:12px 7px;font-size:14px}
 </table>
 </div></div>
 
-<div class="ft">
-<div>🎖️ 성기배소장 전략 | 단기스윙 시그널</div>
-<div style="margin-top:4px">평균단가 = (매수가 + 추가매수가) ÷ 2 | 수익률 = (현재가 − 평균단가) ÷ 평균단가</div>
-</div>
-
-</div>
+</div><!-- /ct -->
 
 <script>
 // ============================================================
 // JSON 데이터 로드 및 렌더링
 // ============================================================
 
-// GitHub Pages에서 JSON 로드 (같은 저장소의 prices.json)
-// 로컬 테스트 시에는 './prices.json' 사용
 const JSON_URL = './prices.json';
 
 let DATA = null;
@@ -256,7 +264,7 @@ let currentFilter = 'all';
 
 async function loadData() {
   try {
-    const resp = await fetch(JSON_URL + '?t=' + Date.now()); // 캐시 방지
+    const resp = await fetch(JSON_URL + '?t=' + Date.now());
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     DATA = await resp.json();
     renderAll();
@@ -291,25 +299,21 @@ function buildFilters() {
   const months = {};
   DATA.holdings.forEach(h => {
     const m = h.rec_date.substring(0, 7);
-    months[m] = (months[m] || 0) + 1;
+    if (!months[m]) months[m] = 0;
+    months[m]++;
   });
 
-  const fb = document.getElementById('filterBtns');
-  let html = `<button class="fbtn active" onclick="flt('all',this)">전체 (${DATA.total_count})</button>`;
-
+  const container = document.getElementById('filterBtns');
+  let html = `<button class="${currentFilter === 'all' ? 'active' : ''}" onclick="setFilter('all')">전체 (${DATA.holdings.length})</button>`;
   Object.keys(months).sort().reverse().forEach(m => {
-    const [y, mm] = m.split('-');
-    const label = parseInt(mm) + '월';
-    html += `<button class="fbtn" onclick="flt('${m}',this)">${label} (${months[m]})</button>`;
+    const label = m.substring(5) + '월';
+    html += `<button class="${currentFilter === m ? 'active' : ''}" onclick="setFilter('${m}')">${label} (${months[m]})</button>`;
   });
-
-  fb.innerHTML = html;
+  container.innerHTML = html;
 }
 
-function flt(m, btn) {
-  currentFilter = m;
-  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+function setFilter(f) {
+  currentFilter = f;
   renderAll();
 }
 
@@ -357,14 +361,12 @@ function renderStats() {
 }
 
 // ============================================================
-// 🔥 신규 매수 카드
+// 🔥 신규 매수 (테이블 형식)
 // ============================================================
 
 function renderNewStocks() {
   const newStocks = DATA.holdings.filter(h => h.is_new && h.is_active);
-
   const section = document.getElementById('newSection');
-  const grid = document.getElementById('newGrid');
 
   if (currentFilter !== 'all' || newStocks.length === 0) {
     section.style.display = 'none';
@@ -372,37 +374,13 @@ function renderNewStocks() {
   }
 
   section.style.display = 'block';
-  document.getElementById('newSub').textContent = `최근 ${DATA.new_stock_days}일 이내 추천 · ${newStocks.length}종목`;
+  document.getElementById('newSub').textContent = '최근 ' + DATA.new_stock_days + '일 이내 추천 · ' + newStocks.length + '종목';
 
   let html = '';
-  newStocks.forEach(h => {
-    const avg = h.avg_price;
-    const cur = h.cur_price;
-    const ret = h.return_pct;
-    const retClass = ret === null ? 'neu' : (ret >= 0 ? 'pos' : 'neg');
-    const retText = ret === null ? '-' : (ret >= 0 ? '+' : '') + ret.toFixed(2) + '%';
-
-    let sellTags = '';
-    if (h.sell_1) sellTags += `<span class="nc-sell-tag">1차 ${h.sell_1}</span>`;
-    if (h.sell_2) sellTags += `<span class="nc-sell-tag">2차 ${h.sell_2}</span>`;
-    if (h.sell_3) sellTags += `<span class="nc-sell-tag">${h.sell_3}</span>`;
-
-    html += `
-    <div class="new-card">
-      <div class="nc-top">
-        <div><span class="nc-name">${h.name}</span><span class="nc-code">${h.code}</span></div>
-        <span class="nc-date">${h.rec_date.substring(5)}</span>
-      </div>
-      <div class="nc-prices">
-        <div class="nc-p"><div class="nc-p-label">평균단가</div><div class="nc-p-value">${avg > 0 ? avg.toLocaleString() + '원' : '-'}</div></div>
-        <div class="nc-p"><div class="nc-p-label">현재가</div><div class="nc-p-value" style="color:var(--gl)">${cur > 0 ? cur.toLocaleString() + '원' : '-'}</div></div>
-      </div>
-      <div class="nc-ret ${retClass}">${retText}</div>
-      <div class="nc-sells">${sellTags}</div>
-    </div>`;
+  newStocks.forEach(function(h, i) {
+    html += buildRow(h, i + 1);
   });
-
-  grid.innerHTML = html;
+  document.getElementById('tbNew').innerHTML = html;
 }
 
 // ============================================================
@@ -426,7 +404,7 @@ function renderActiveTable() {
   const sub = document.getElementById('activeSub');
   if (tableItems.length > 0) {
     header.style.display = 'flex';
-    sub.textContent = `이익실현 후 잔여 보유 · ${tableItems.length}종목`;
+    sub.textContent = '이익실현 후 잔여 보유 · ' + tableItems.length + '종목';
   } else {
     header.style.display = 'none';
   }
@@ -440,11 +418,11 @@ function renderActiveTable() {
   const months = {'2026-02':'📅 2026년 2월','2026-01':'📅 2026년 1월','2025-12':'📅 2025년 12월'};
   let html = '', cm = '';
 
-  tableItems.forEach((h, i) => {
+  tableItems.forEach(function(h, i) {
     const m = h.rec_date.substring(0, 7);
     if (m !== cm && currentFilter === 'all') {
       cm = m;
-      html += `<tr class="mh"><td colspan="13">${months[m] || m}</td></tr>`;
+      html += '<tr class="mh"><td colspan="13">' + (months[m] || m) + '</td></tr>';
     }
     html += buildRow(h, i + 1);
   });
@@ -469,7 +447,7 @@ function renderClosedTable() {
   if (items.length > 0) {
     header.style.display = 'flex';
     tableDiv.style.display = 'block';
-    sub.textContent = `${items.length}종목`;
+    sub.textContent = items.length + '종목';
   } else {
     header.style.display = 'none';
     tableDiv.style.display = 'none';
@@ -478,7 +456,7 @@ function renderClosedTable() {
 
   const tb = document.getElementById('tbClosed');
   let html = '';
-  items.forEach((h, i) => {
+  items.forEach(function(h, i) {
     html += buildRow(h, i + 1);
   });
   tb.innerHTML = html;
@@ -489,46 +467,46 @@ function renderClosedTable() {
 // ============================================================
 
 function buildRow(h, num) {
-  const buy = h.buy_price || 0;
-  const add = h.add_buy || 0;
-  const avg = h.avg_price || 0;
-  const cur = h.cur_price || 0;
+  var buy = h.buy_price || 0;
+  var add = h.add_buy || 0;
+  var avg = h.avg_price || 0;
+  var cur = h.cur_price || 0;
 
-  const buyH = buy > 0 ? `<span style="font-weight:600">${buy.toLocaleString()}</span>` : '<span style="color:var(--ts)">-</span>';
-  const addH = add > 0 ? `<span style="font-weight:600">${add.toLocaleString()}</span>` : '<span style="color:var(--ts)">-</span>';
-  const avgH = avg > 0 ? `<span class="avg-v">${avg.toLocaleString()}원</span>` : '<span style="color:var(--ts)">-</span>';
-  const curH = cur > 0 ? `<span style="color:var(--gl);font-weight:600">${cur.toLocaleString()}</span>` : '<span style="color:var(--ts)">-</span>';
+  var buyH = buy > 0 ? '<span style="font-weight:600">' + buy.toLocaleString() + '</span>' : '<span style="color:var(--ts)">-</span>';
+  var addH = add > 0 ? '<span style="font-weight:600">' + add.toLocaleString() + '</span>' : '<span style="color:var(--ts)">-</span>';
+  var avgH = avg > 0 ? '<span class="avg-v">' + avg.toLocaleString() + '원</span>' : '<span style="color:var(--ts)">-</span>';
+  var curH = cur > 0 ? '<span style="color:var(--gl);font-weight:600">' + cur.toLocaleString() + '</span>' : '<span style="color:var(--ts)">-</span>';
 
-  let retH = '<span class="rb neu">-</span>';
+  var retH = '<span class="rb neu">-</span>';
   if (h.return_pct !== null) {
-    const r = h.return_pct;
-    retH = `<span class="rb ${r >= 0 ? 'pos' : 'neg'}">${r >= 0 ? '+' : ''}${r.toFixed(2)}%</span>`;
+    var r = h.return_pct;
+    retH = '<span class="rb ' + (r >= 0 ? 'pos' : 'neg') + '">' + (r >= 0 ? '+' : '') + r.toFixed(2) + '%</span>';
   }
 
-  const s1H = h.sell_1 ? `<span style="font-weight:600">${h.sell_1}</span>` : '<span style="color:var(--ts)">-</span>';
-  const s2H = h.sell_2 ? `<span style="font-weight:600">${h.sell_2}</span>` : '<span style="color:var(--ts)">-</span>';
+  var s1H = h.sell_1 ? '<span style="font-weight:600">' + h.sell_1 + '</span>' : '<span style="color:var(--ts)">-</span>';
+  var s2H = h.sell_2 ? '<span style="font-weight:600">' + h.sell_2 + '</span>' : '<span style="color:var(--ts)">-</span>';
 
-  let s3H = '<span style="color:var(--ts)">-</span>';
+  var s3H = '<span style="color:var(--ts)">-</span>';
   if (h.sell_3) {
-    if (h.sell_3.includes('전량이익실현')) s3H = `<span style="font-weight:700">${h.sell_3}</span>`;
-    else s3H = `<span style="font-weight:600">${h.sell_3}</span>`;
+    if (h.sell_3.indexOf('전량이익실현') >= 0) s3H = '<span style="font-weight:700">' + h.sell_3 + '</span>';
+    else s3H = '<span style="font-weight:600">' + h.sell_3 + '</span>';
   }
 
-  return `<tr>
-<td class="rn">${num}</td>
-<td style="text-align:left"><span class="sn">${h.name}</span><span class="scode">${h.code}</span></td>
-<td class="dc">${h.rec_date.substring(5)}</td>
-<td>${buyH}</td>
-<td>${addH}</td>
-<td>${avgH}</td>
-<td>${curH}</td>
-<td>${retH}</td>
-<td>${s1H}</td>
-<td>${s2H}</td>
-<td>${s3H}</td>
-<td><span class="wt">${h.weight}</span></td>
-<td class="nt">${h.note || '-'}</td>
-</tr>`;
+  return '<tr>' +
+    '<td class="rn">' + num + '</td>' +
+    '<td style="text-align:left"><span class="sn">' + h.name + '</span><span class="scode">' + h.code + '</span></td>' +
+    '<td class="dc">' + h.rec_date.substring(5) + '</td>' +
+    '<td>' + buyH + '</td>' +
+    '<td>' + addH + '</td>' +
+    '<td>' + avgH + '</td>' +
+    '<td>' + curH + '</td>' +
+    '<td>' + retH + '</td>' +
+    '<td>' + s1H + '</td>' +
+    '<td>' + s2H + '</td>' +
+    '<td>' + s3H + '</td>' +
+    '<td><span class="wt">' + h.weight + '</span></td>' +
+    '<td class="nt">' + (h.note || '-') + '</td>' +
+    '</tr>';
 }
 
 // ============================================================
@@ -538,7 +516,7 @@ function buildRow(h, num) {
 loadData();
 
 // 장중이면 3분마다 자동 갱신
-setInterval(() => {
+setInterval(function() {
   if (DATA && DATA.market_open) {
     loadData();
   }
