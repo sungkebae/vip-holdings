@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-14 22:06:53",
+  "updated_at": "2026-02-14 22:23:08",
   "market_open": false,
   "total_count": 63,
   "active_count": 58,
@@ -1009,7 +1009,7 @@
       "is_new": false
     },
     {
-      "code": "049600",
+      "code": "004960",
       "name": "한신공영",
       "rec_date": "2025-12-17",
       "buy_price": 10700,
