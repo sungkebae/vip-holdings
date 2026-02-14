@@ -54,14 +54,6 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 .fb button{padding:8px 20px;border-radius:8px;border:1px solid var(--bd);background:var(--sf);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit;color:var(--tx)}
 .fb button.active,.fb button:hover{background:var(--tx);color:#fff;border-color:var(--tx)}
 
-/* =============================== */
-/* 🔥 신규 매수 섹션 (테이블 형식) */
-/* =============================== */
-.new-section{margin-bottom:28px}
-.new-section .tw{border-left:3px solid var(--rd)}
-.new-badge{background:linear-gradient(135deg,#dc2626,#ea580c);color:white;padding:6px 16px;border-radius:8px;font-size:17px;font-weight:800;letter-spacing:1px}
-.new-sub{font-size:16px;color:var(--ts)}
-
 /* 테이블 */
 .section-header{display:flex;align-items:center;gap:10px;margin:28px 0 16px}
 .section-badge{padding:6px 16px;border-radius:8px;font-size:17px;font-weight:800;letter-spacing:1px}
@@ -167,34 +159,6 @@ thead th,tbody td{padding:12px 7px;font-size:14px}
 
 <!-- 필터 버튼 -->
 <div class="fb" id="filterBtns"></div>
-
-<!-- 🔥 신규 매수 섹션 (테이블 형식) -->
-<div class="new-section" id="newSection" style="display:none">
-<div class="section-header" style="margin-bottom:0">
-<span class="new-badge">🔥 신규 매수</span>
-<span class="new-sub" id="newSub">최근 7일 이내 추천</span>
-</div>
-<div class="tw"><div class="tsc">
-<table>
-<thead><tr>
-<th>#</th>
-<th style="text-align:left">종목명</th>
-<th>추천일</th>
-<th>매수가</th>
-<th>추가매수</th>
-<th>평균단가</th>
-<th>현재가</th>
-<th>수익률</th>
-<th class="sell-hd">1차 매도</th>
-<th class="sell-hd">2차 매도</th>
-<th class="sell-hd">30% 보유</th>
-<th>비중</th>
-<th>비고</th>
-</tr></thead>
-<tbody id="tbNew"></tbody>
-</table>
-</div></div>
-</div>
 
 <!-- 📊 보유 중 테이블 -->
 <div class="section-header" id="activeHeader" style="display:none">
@@ -325,7 +289,6 @@ function renderAll() {
   if (!DATA) return;
   buildFilters();
   renderStats();
-  renderNewStocks();
   renderActiveTable();
   renderClosedTable();
 }
@@ -361,29 +324,6 @@ function renderStats() {
 }
 
 // ============================================================
-// 🔥 신규 매수 (테이블 형식)
-// ============================================================
-
-function renderNewStocks() {
-  const newStocks = DATA.holdings.filter(h => h.is_new && h.is_active);
-  const section = document.getElementById('newSection');
-
-  if (currentFilter !== 'all' || newStocks.length === 0) {
-    section.style.display = 'none';
-    return;
-  }
-
-  section.style.display = 'block';
-  document.getElementById('newSub').textContent = '최근 ' + DATA.new_stock_days + '일 이내 추천 · ' + newStocks.length + '종목';
-
-  let html = '';
-  newStocks.forEach(function(h, i) {
-    html += buildRow(h, i + 1);
-  });
-  document.getElementById('tbNew').innerHTML = html;
-}
-
-// ============================================================
 // 📊 보유 중 테이블
 // ============================================================
 
@@ -393,12 +333,7 @@ function renderActiveTable() {
     items = DATA.holdings.filter(h => h.is_active && h.rec_date.startsWith(currentFilter));
   }
 
-  // 신규 매수에 이미 표시된 종목은 제외 (전체 보기에서만)
-  let excludeNew = new Set();
-  if (currentFilter === 'all') {
-    DATA.holdings.filter(h => h.is_new && h.is_active).forEach(h => excludeNew.add(h.code));
-  }
-  const tableItems = items.filter(h => !excludeNew.has(h.code));
+  const tableItems = items;
 
   const header = document.getElementById('activeHeader');
   const sub = document.getElementById('activeSub');
