@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-15 03:29:18",
+  "updated_at": "2026-02-15 03:39:01",
   "market_open": false,
   "total_count": 51,
   "active_count": 46,
@@ -329,14 +329,14 @@
       "is_new": false
     },
     {
-      "code": "032820a",
+      "code": "457550",
       "name": "우진엔텍",
       "rec_date": "2026-01-21",
       "buy_price": 28250,
       "add_buy": 27450,
       "avg_price": 27850,
-      "cur_price": 12340,
-      "return_pct": -55.69,
+      "cur_price": 0,
+      "return_pct": null,
       "sell_1": "29500원(50%)",
       "sell_2": "31000원",
       "sell_3": "25% 보유",
