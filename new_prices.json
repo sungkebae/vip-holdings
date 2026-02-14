@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-15 00:03:04",
+  "updated_at": "2026-02-15 00:17:31",
   "total_count": 12,
   "holdings": [
     {
@@ -51,11 +51,11 @@
       "code": "045390",
       "name": "대아티아이",
       "rec_date": "2026-02-10",
-      "buy_price": 4990,
+      "buy_price": 4590,
       "add_buy": 0,
-      "avg_price": 4990,
+      "avg_price": 4590,
       "cur_price": 4645,
-      "return_pct": -6.91,
+      "return_pct": 1.2,
       "sell_1": "",
       "sell_2": "",
       "sell_3": "",
