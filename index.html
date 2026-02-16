@@ -115,7 +115,7 @@ tbody td{padding:7px 4px;font-size:12px}
 <div class="sc"><div class="lb">보유 종목</div><div class="vl blue" id="totalC">-</div><div class="sb" id="totalS">-</div><div class="sb" id="totalS2" style="color:var(--gn)"></div></div>
 <div class="sc"><div class="lb">평균 수익률</div><div class="vl red" id="avgR">-</div><div class="sb" id="avgS">-</div></div>
 <div class="sc"><div class="lb">수익/손실</div><div class="vl green" id="profC">-</div><div class="sb" id="profS">-</div></div>
-<div class="sc"><div class="lb">승률</div><div class="vl red" id="lossC">-</div><div class="sb" id="lossS">-</div></div>
+<div class="sc"><div class="lb">최고 수익</div><div class="vl red" id="lossC">-</div><div class="sb" id="lossS">-</div></div>
 </div>
 
 <!-- 탭 -->
@@ -309,9 +309,11 @@ function renderStats() {
     document.getElementById('avgR').className = 'vl ' + (av >= 0 ? 'red' : 'blue');
     document.getElementById('avgS').textContent = cnt + '종목 기준';
     document.getElementById('profC').textContent = pf + ' / ' + ls;
-    document.getElementById('profS').textContent = '수익 / 손실';
-    document.getElementById('lossC').textContent = (pf / cnt * 100).toFixed(0) + '%';
-    document.getElementById('lossS').textContent = pf + '/' + cnt + '종목';
+    document.getElementById('profS').textContent = '승률 ' + (pf / cnt * 100).toFixed(0) + '%';
+    if (mx > -Infinity) {
+      document.getElementById('lossC').textContent = '+' + mx.toFixed(2) + '%';
+      document.getElementById('lossS').textContent = mxN;
+    }
   } else {
     document.getElementById('avgR').textContent = '-';
     document.getElementById('avgS').textContent = '';
