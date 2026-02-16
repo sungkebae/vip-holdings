@@ -106,7 +106,7 @@ tbody td{padding:8px 5px;font-size:13px}
 <div class="sc"><div class="lb">보유 종목</div><div class="vl blue" id="totalC">-</div><div class="sb" id="totalS">-</div></div>
 <div class="sc"><div class="lb">평균 수익률</div><div class="vl red" id="avgR">-</div><div class="sb" id="avgS">-</div></div>
 <div class="sc"><div class="lb">수익 종목</div><div class="vl green" id="profC">-</div><div class="sb" id="profS">-</div></div>
-<div class="sc"><div class="lb">최고 수익</div><div class="vl gold" id="maxR">-</div><div class="sb" id="maxS">-</div></div>
+<div class="sc"><div class="lb">최고 수익</div><div class="vl red" id="maxR">-</div><div class="sb" id="maxS">-</div></div>
 </div>
 
 <!-- 탭 -->
@@ -127,11 +127,11 @@ tbody td{padding:8px 5px;font-size:13px}
 <div class="tw"><div class="tsc">
 <table>
 <thead><tr>
-<th style="text-align:left">종목명</th>
-<th>수익률</th>
+<th>추천일</th>
+<th style="text-align:left;padding-right:2px">종목명</th>
+<th style="padding-left:2px">수익률</th>
 <th>현재가</th>
 <th>매수가</th>
-<th>추천일</th>
 <th style="color:var(--gn)">매도목표</th>
 <th>비중</th>
 <th>비고</th>
@@ -367,11 +367,11 @@ function renderTable() {
     var noteH = h.note ? '<span class="nt">' + h.note + '</span>' : '<span style="color:var(--ts)">-</span>';
 
     html += '<tr>' +
-      '<td style="text-align:left"><span class="sn">' + h.name + '</span><span class="scode">' + h.code + '</span></td>' +
-      '<td>' + retH + '</td>' +
+      '<td>' + dayH + '</td>' +
+      '<td style="text-align:left;padding-right:2px"><span class="sn">' + h.name + '</span><span class="scode">' + h.code + '</span></td>' +
+      '<td style="padding-left:2px">' + retH + '</td>' +
       '<td>' + curH + '</td>' +
       '<td>' + buyH + '</td>' +
-      '<td>' + dayH + '</td>' +
       '<td>' + sellH + '</td>' +
       '<td>' + wtH + '</td>' +
       '<td>' + noteH + '</td>' +
