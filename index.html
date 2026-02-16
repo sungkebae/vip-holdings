@@ -112,10 +112,10 @@ tbody td{padding:7px 4px;font-size:12px}
 </div>
 
 <div class="sm">
-<div class="sc"><div class="lb">보유 종목</div><div class="vl blue" id="totalC">-</div><div class="sb" id="totalS">-</div></div>
+<div class="sc"><div class="lb">보유 종목</div><div class="vl blue" id="totalC">-</div><div class="sb" id="totalS">-</div><div class="sb" id="totalS2" style="color:var(--gn)"></div></div>
 <div class="sc"><div class="lb">평균 수익률</div><div class="vl red" id="avgR">-</div><div class="sb" id="avgS">-</div></div>
-<div class="sc"><div class="lb">수익 종목</div><div class="vl green" id="profC">-</div><div class="sb" id="profS">-</div></div>
-<div class="sc"><div class="lb">하락 종목</div><div class="vl blue" id="lossC">-</div><div class="sb" id="lossS">-</div></div>
+<div class="sc"><div class="lb">수익/손실</div><div class="vl green" id="profC">-</div><div class="sb" id="profS">-</div></div>
+<div class="sc"><div class="lb">승률</div><div class="vl red" id="lossC">-</div><div class="sb" id="lossS">-</div></div>
 </div>
 
 <!-- 탭 -->
@@ -129,7 +129,7 @@ tbody td{padding:7px 4px;font-size:12px}
 <div id="filterBtns"></div>
 <div class="sep"></div>
 <button class="sort-btn" id="sortDate" onclick="toggleSort('date')">📅 추천일 ▼</button>
-<button class="sort-btn on" id="sortReturn" onclick="toggleSort('return')">📊 수익률</button>
+<button class="sort-btn" id="sortReturn" onclick="toggleSort('return')">📊 수익률 ▼</button>
 </div>
 
 <!-- 테이블 -->
@@ -137,8 +137,8 @@ tbody td{padding:7px 4px;font-size:12px}
 <table>
 <thead><tr>
 <th>추천일</th>
-<th style="text-align:left;padding-right:2px">종목명</th>
-<th style="padding-left:2px">수익률</th>
+<th style="text-align:left;padding-right:0">종목명</th>
+<th style="padding-left:0">수익률</th>
 <th>현재가</th>
 <th>매수가</th>
 <th style="color:var(--gn)">매도목표</th>
@@ -211,8 +211,9 @@ function buildFilters() {
   });
 
   var sorted = Object.keys(months).sort().reverse();
+  var total = items.length;
   var html = '<button class="fbtn ' + (currentFilter === 'all' ? 'active' : '') +
-    '" onclick="setFilter(\'all\')">전체</button>';
+    '" onclick="setFilter(\'all\')">전체 ' + total + '</button>';
   sorted.forEach(function(m) {
     var parts = m.split('-');
     var label = parts[0].substring(2) + '년 ' + parseInt(parts[1]) + '월';
@@ -293,16 +294,24 @@ function renderStats() {
 
   document.getElementById('totalC').textContent = items.length + '종목';
   document.getElementById('totalS').textContent = currentTab === 'active' ? '보유 중' : '이익실현';
+  
+  // 일부이익실현 (매도목표가 있는 종목)
+  if (currentTab === 'active') {
+    var partial = items.filter(function(h) { return h.sell_target && h.sell_target.length > 0; }).length;
+    document.getElementById('totalS2').textContent = partial > 0 ? '일부익절 ' + partial + '종목' : '';
+  } else {
+    document.getElementById('totalS2').textContent = '';
+  }
 
   if (cnt > 0) {
     var av = (tt / cnt).toFixed(2);
     document.getElementById('avgR').textContent = (av >= 0 ? '+' : '') + av + '%';
     document.getElementById('avgR').className = 'vl ' + (av >= 0 ? 'red' : 'blue');
     document.getElementById('avgS').textContent = cnt + '종목 기준';
-    document.getElementById('profC').textContent = pf + '종목';
-    document.getElementById('profS').textContent = '승률 ' + (pf / cnt * 100).toFixed(0) + '%';
-    document.getElementById('lossC').textContent = ls + '종목';
-    document.getElementById('lossS').textContent = cnt + '종목 중';
+    document.getElementById('profC').textContent = pf + ' / ' + ls;
+    document.getElementById('profS').textContent = '수익 / 손실';
+    document.getElementById('lossC').textContent = (pf / cnt * 100).toFixed(0) + '%';
+    document.getElementById('lossS').textContent = pf + '/' + cnt + '종목';
   } else {
     document.getElementById('avgR').textContent = '-';
     document.getElementById('avgS').textContent = '';
@@ -405,8 +414,8 @@ function renderTable() {
 
     html += '<tr>' +
       '<td>' + dayH + '</td>' +
-      '<td style="text-align:left;padding-right:2px"><span class="sn">' + h.name + '</span><span class="scode">' + h.code + '</span></td>' +
-      '<td style="padding-left:2px">' + retH + '</td>' +
+      '<td style="text-align:left;padding-right:0"><span class="sn">' + h.name + '</span><span class="scode">' + h.code + '</span></td>' +
+      '<td style="padding-left:0">' + retH + '</td>' +
       '<td>' + curH + '</td>' +
       '<td>' + buyH + '</td>' +
       '<td>' + sellH + '</td>' +
