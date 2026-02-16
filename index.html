@@ -52,7 +52,15 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 /* 테이블 */
 .tw{border:1px solid var(--bd);border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .tsc{overflow-x:auto;-webkit-overflow-scrolling:touch}
-table{width:100%;border-collapse:collapse;min-width:680px}
+table{width:100%;border-collapse:collapse;min-width:680px;table-layout:fixed}
+colgroup col.c-date{width:42px}
+colgroup col.c-name{width:160px}
+colgroup col.c-ret{width:78px}
+colgroup col.c-cur{width:70px}
+colgroup col.c-buy{width:75px}
+colgroup col.c-sell{width:100px}
+colgroup col.c-wt{width:55px}
+colgroup col.c-note{width:auto}
 thead th{background:var(--sf);padding:8px 6px;font-size:11px;font-weight:700;color:var(--ts);border-bottom:2px solid var(--bd);white-space:nowrap;position:sticky;top:0;text-align:center;z-index:10}
 thead th:nth-child(1){width:40px}
 thead th:nth-child(2){width:auto}
@@ -138,6 +146,16 @@ tbody td{padding:7px 4px;font-size:12px}
 <!-- 테이블 -->
 <div class="tw"><div class="tsc">
 <table>
+<colgroup>
+<col class="c-date">
+<col class="c-name">
+<col class="c-ret">
+<col class="c-cur">
+<col class="c-buy">
+<col class="c-sell">
+<col class="c-wt">
+<col class="c-note">
+</colgroup>
 <thead><tr>
 <th>추천일</th>
 <th style="text-align:left;padding-right:0">종목명</th>
