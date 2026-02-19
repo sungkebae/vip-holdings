@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-19 19:52:55",
+  "updated_at": "2026-02-19 19:56:10",
   "total_count": 69,
   "active_count": 61,
   "holdings": [
@@ -315,11 +315,11 @@
       "code": "294570",
       "name": "쿠콘",
       "rec_date": "2026-01-27",
-      "buy_price": 3450,
+      "buy_price": 34550,
       "add_buy": 0,
-      "avg_price": 3450,
+      "avg_price": 34550,
       "cur_price": 33900,
-      "return_pct": 882.61,
+      "return_pct": -1.88,
       "sell_target": "",
       "weight": "3%",
       "note": "3.3.4 분할매수 ~33500원 / 30500원 부근 배수매수",
