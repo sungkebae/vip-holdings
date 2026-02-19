@@ -1,8 +1,36 @@
 {
-  "updated_at": "2026-02-19 19:56:10",
-  "total_count": 69,
-  "active_count": 61,
+  "updated_at": "2026-02-19 20:01:14",
+  "total_count": 71,
+  "active_count": 63,
   "holdings": [
+    {
+      "code": "115610",
+      "name": "이미지스",
+      "rec_date": "2026-02-19",
+      "buy_price": 1800,
+      "add_buy": 0,
+      "avg_price": 1800,
+      "cur_price": 0,
+      "return_pct": null,
+      "sell_target": "5~10%",
+      "weight": "",
+      "note": "",
+      "is_active": true
+    },
+    {
+      "code": "000700",
+      "name": "아크릴",
+      "rec_date": "2026-02-19",
+      "buy_price": 47700,
+      "add_buy": 0,
+      "avg_price": 47700,
+      "cur_price": 0,
+      "return_pct": null,
+      "sell_target": "5~10%",
+      "weight": "",
+      "note": "",
+      "is_active": true
+    },
     {
       "code": "322510",
       "name": "제이엘케이",
