@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-19 18:37:12",
+  "updated_at": "2026-02-19 18:40:28",
   "total_count": 69,
-  "active_count": 59,
+  "active_count": 58,
   "holdings": [
     {
       "code": "322510",
@@ -203,14 +203,14 @@
       "code": "060720",
       "name": "KH바텍",
       "rec_date": "2026-02-03",
-      "buy_price": 18590,
+      "buy_price": 17394,
       "add_buy": 17000,
-      "avg_price": 17795,
+      "avg_price": 17197,
       "cur_price": 17120,
-      "return_pct": -3.79,
+      "return_pct": -0.45,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "추가매수 평단 17394원",
+      "note": "추가매수",
       "is_active": true
     },
     {
@@ -225,7 +225,7 @@
       "sell_target": "",
       "weight": "5~10%",
       "note": "추가 3130원",
-      "is_active": true
+      "is_active": false
     },
     {
       "code": "053610",
