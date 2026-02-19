@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ðŸ† ì„±ê¸°ë°°ì†Œìž¥ ì „ëžµ | VIP ë³´ìœ ì¢…ëª©</title>
+<title>🏆 성기배소장 전략 | VIP 보유종목</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#ffffff;--sf:#f5f6f8;--sf2:#ebedf2;--bd:#d8dbe5;--tx:#1a1d27;--ts:#6b7280;--ac:#2563eb;--gn:#059669;--rd:#dc2626;--gl:#d97706}
@@ -19,7 +19,7 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 .update-bar{display:flex;justify-content:center;align-items:center;gap:8px;margin-bottom:14px;font-size:12px;color:var(--ts)}
 .update-dot{width:7px;height:7px;border-radius:50%;background:#94a3b8;display:inline-block}
 
-/* ìƒë‹¨ í†µê³„ */
+/* 상단 통계 */
 .sm{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px}
 .sc{background:var(--sf);border:1px solid var(--bd);border-radius:8px;padding:10px 6px;text-align:center}
 .sc .lb{font-size:10px;color:var(--ts);font-weight:500;margin-bottom:1px}
@@ -27,13 +27,13 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 .sc .sb{font-size:10px;color:var(--ts)}
 .green{color:var(--gn)}.red{color:var(--rd)}.blue{color:var(--ac)}.gold{color:var(--gl)}
 
-/* íƒ­ */
+/* 탭 */
 .tabs{display:flex;gap:0;margin-bottom:12px;border-bottom:2px solid var(--bd)}
 .tab{padding:8px 16px;font-size:14px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;color:var(--ts);transition:all .2s}
 .tab.active{color:var(--rd);border-bottom-color:var(--rd)}
 .tab .cnt{font-size:12px;font-weight:400;margin-left:3px}
 
-/* ì›”ë³„ í•„í„° + ì •ë ¬ */
+/* 월별 필터 + 정렬 */
 .ctrl{display:flex;gap:5px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
 .fbtn{background:var(--sf);border:1px solid var(--bd);color:var(--ts);padding:5px 10px;border-radius:5px;font-size:12px;font-family:inherit;cursor:pointer;font-weight:500;transition:all .2s}
 .fbtn:hover{border-color:var(--ac);color:var(--tx)}
@@ -43,13 +43,13 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 .sort-btn.on{background:var(--rd);border-color:var(--rd);color:white}
 .sep{width:1px;height:20px;background:var(--bd);margin:0 2px}
 
-/* ì›” êµ¬ë¶„ í—¤ë” */
+/* 월 구분 헤더 */
 .month-row td{background:linear-gradient(135deg,#f0f4ff,#fef3f2);padding:8px 12px !important;border-bottom:2px solid var(--rd) !important}
 .month-label{font-weight:900;font-size:15px;color:var(--rd)}
 .month-stats{font-size:12px;color:var(--ts);margin-left:10px}
 .month-top{font-size:12px;color:var(--gn);font-weight:600}
 
-/* í…Œì´ë¸” */
+/* 테이블 */
 .tw{border:1px solid var(--bd);border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .tsc{overflow-x:auto;-webkit-overflow-scrolling:touch}
 table{width:100%;border-collapse:collapse;min-width:680px;table-layout:fixed}
@@ -112,38 +112,38 @@ tbody td{padding:7px 4px;font-size:12px}
 <div class="ct">
 
 <div class="hd">
-<div class="hb">ðŸ† VIP PORTFOLIO</div>
-<h1>ì„±ê¸°ë°°ì†Œìž¥ ì „ëžµ</h1>
-<div class="hd-sub">ë‹¨ê¸°ìŠ¤ìœ™ ì‹œê·¸ë„ Â· VIP ë³´ìœ ì¢…ëª© í˜„í™©</div>
+<div class="hb">🏆 VIP PORTFOLIO</div>
+<h1>성기배소장 전략</h1>
+<div class="hd-sub">단기스윙 시그널 · VIP 보유종목 현황</div>
 </div>
 
 <div class="update-bar">
 <span class="update-dot" id="statusDot"></span>
-<span id="updateTime">ë°ì´í„° ë¡œë”© ì¤‘...</span>
+<span id="updateTime">데이터 로딩 중...</span>
 </div>
 
 <div class="sm">
-<div class="sc"><div class="lb">ë³´ìœ  ì¢…ëª©</div><div class="vl blue" id="totalC">-</div><div class="sb" id="totalS">-</div><div class="sb" id="totalS2" style="color:var(--gn)"></div></div>
-<div class="sc"><div class="lb">í‰ê·  ìˆ˜ìµë¥ </div><div class="vl red" id="avgR">-</div><div class="sb" id="avgS">-</div></div>
-<div class="sc"><div class="lb">ìˆ˜ìµ/ì†ì‹¤</div><div class="vl green" id="profC">-</div><div class="sb" id="profS">-</div></div>
-<div class="sc"><div class="lb">ìµœê³  ìˆ˜ìµ</div><div class="vl red" id="lossC">-</div><div class="sb" id="lossS">-</div></div>
+<div class="sc"><div class="lb">보유 종목</div><div class="vl blue" id="totalC">-</div><div class="sb" id="totalS">-</div><div class="sb" id="totalS2" style="color:var(--gn)"></div></div>
+<div class="sc"><div class="lb">평균 수익률</div><div class="vl red" id="avgR">-</div><div class="sb" id="avgS">-</div></div>
+<div class="sc"><div class="lb">수익/손실</div><div class="vl green" id="profC">-</div><div class="sb" id="profS">-</div></div>
+<div class="sc"><div class="lb">최고 수익</div><div class="vl red" id="lossC">-</div><div class="sb" id="lossS">-</div></div>
 </div>
 
-<!-- íƒ­ -->
+<!-- 탭 -->
 <div class="tabs">
-<div class="tab active" id="tabActive" onclick="switchTab('active')">ë³´ìœ  ì¤‘<span class="cnt" id="tabActiveC"></span></div>
-<div class="tab" id="tabClosed" onclick="switchTab('closed')">ì´ìµì‹¤í˜„<span class="cnt" id="tabClosedC"></span></div>
+<div class="tab active" id="tabActive" onclick="switchTab('active')">보유 중<span class="cnt" id="tabActiveC"></span></div>
+<div class="tab" id="tabClosed" onclick="switchTab('closed')">이익실현<span class="cnt" id="tabClosedC"></span></div>
 </div>
 
-<!-- ì›”ë³„ í•„í„° + ì •ë ¬ -->
+<!-- 월별 필터 + 정렬 -->
 <div class="ctrl" id="ctrlBar">
 <div id="filterBtns"></div>
 <div class="sep"></div>
-<button class="sort-btn" id="sortDate" onclick="toggleSort('date')">ðŸ“… ì¶”ì²œì¼ â–¼</button>
-<button class="sort-btn" id="sortReturn" onclick="toggleSort('return')">ðŸ“Š ìˆ˜ìµë¥  â–¼</button>
+<button class="sort-btn" id="sortDate" onclick="toggleSort('date')">📅 추천일 ▼</button>
+<button class="sort-btn" id="sortReturn" onclick="toggleSort('return')">📊 수익률 ▼</button>
 </div>
 
-<!-- í…Œì´ë¸” -->
+<!-- 테이블 -->
 <div class="tw"><div class="tsc">
 <table>
 <colgroup>
@@ -157,17 +157,17 @@ tbody td{padding:7px 4px;font-size:12px}
 <col class="c-note">
 </colgroup>
 <thead><tr>
-<th>ì¶”ì²œì¼</th>
-<th style="text-align:left;padding-right:0">ì¢…ëª©ëª…</th>
-<th style="padding-left:0">ìˆ˜ìµë¥ </th>
-<th>í˜„ìž¬ê°€</th>
-<th>ë§¤ìˆ˜ê°€</th>
-<th style="color:var(--gn)">ë§¤ë„ëª©í‘œ</th>
-<th>ë¹„ì¤‘</th>
-<th>ë¹„ê³ </th>
+<th>추천일</th>
+<th style="text-align:left;padding-right:0">종목명</th>
+<th style="padding-left:0">수익률</th>
+<th>현재가</th>
+<th>매수가</th>
+<th style="color:var(--gn)">매도목표</th>
+<th>비중</th>
+<th>비고</th>
 </tr></thead>
 <tbody id="tb">
-<tr><td colspan="8" class="loading"><div class="loading-spin"></div><br>ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜¤ëŠ” ì¤‘...</td></tr>
+<tr><td colspan="8" class="loading"><div class="loading-spin"></div><br>데이터를 불러오는 중...</td></tr>
 </tbody>
 </table>
 </div></div>
@@ -191,14 +191,14 @@ async function loadData() {
   } catch (e) {
     console.error(e);
     document.getElementById('tb').innerHTML =
-      '<tr><td colspan="8" class="no-data">ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜¬ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.</td></tr>';
+      '<tr><td colspan="8" class="no-data">데이터를 불러올 수 없습니다.</td></tr>';
   }
 }
 
 function renderAll() {
   if (!DATA) return;
   document.getElementById('statusDot').style.background = '#94a3b8';
-  document.getElementById('updateTime').textContent = DATA.updated_at + ' ê¸°ì¤€';
+  document.getElementById('updateTime').textContent = DATA.updated_at + ' 기준';
 
   var active = DATA.holdings.filter(function(h){ return h.is_active; });
   var closed = DATA.holdings.filter(function(h){ return !h.is_active; });
@@ -220,7 +220,7 @@ function switchTab(tab) {
   renderTable();
 }
 
-// â”€â”€ í•„í„° â”€â”€
+// ── 필터 ──
 function buildFilters() {
   var items = getTabItems();
   var months = {};
@@ -234,10 +234,10 @@ function buildFilters() {
   var sorted = Object.keys(months).sort().reverse();
   var total = items.length;
   var html = '<button class="fbtn ' + (currentFilter === 'all' ? 'active' : '') +
-    '" onclick="setFilter(\'all\')">ì „ì²´ ' + total + '</button>';
+    '" onclick="setFilter(\'all\')">전체 ' + total + '</button>';
   sorted.forEach(function(m) {
     var parts = m.split('-');
-    var label = parts[0].substring(2) + 'ë…„ ' + parseInt(parts[1]) + 'ì›”';
+    var label = parts[0].substring(2) + '년 ' + parseInt(parts[1]) + '월';
     html += '<button class="fbtn ' + (currentFilter === m ? 'active' : '') +
       '" onclick="setFilter(\'' + m + '\')">' + label + '</button>';
   });
@@ -267,7 +267,7 @@ function getFilteredItems() {
   return items;
 }
 
-// â”€â”€ ì •ë ¬ â”€â”€
+// ── 정렬 ──
 function toggleSort(type) {
   if (currentSort === type) {
     sortAsc = !sortAsc;
@@ -277,8 +277,8 @@ function toggleSort(type) {
   }
   document.getElementById('sortDate').className = 'sort-btn' + (currentSort === 'date' ? ' on' : '');
   document.getElementById('sortReturn').className = 'sort-btn' + (currentSort === 'return' ? ' on' : '');
-  document.getElementById('sortDate').textContent = 'ðŸ“… ì¶”ì²œì¼' + (currentSort === 'date' ? (sortAsc ? ' â–²' : ' â–¼') : '');
-  document.getElementById('sortReturn').textContent = 'ðŸ“Š ìˆ˜ìµë¥ ' + (currentSort === 'return' ? (sortAsc ? ' â–²' : ' â–¼') : '');
+  document.getElementById('sortDate').textContent = '📅 추천일' + (currentSort === 'date' ? (sortAsc ? ' ▲' : ' ▼') : '');
+  document.getElementById('sortReturn').textContent = '📊 수익률' + (currentSort === 'return' ? (sortAsc ? ' ▲' : ' ▼') : '');
   renderTable();
 }
 
@@ -298,7 +298,7 @@ function sortItems(items) {
   return sorted;
 }
 
-// â”€â”€ í†µê³„ â”€â”€
+// ── 통계 ──
 function renderStats() {
   var items = getFilteredItems();
   var tt = 0, cnt = 0, pf = 0, ls = 0, mx = -Infinity, mxN = '';
@@ -313,13 +313,13 @@ function renderStats() {
     }
   });
 
-  document.getElementById('totalC').textContent = items.length + 'ì¢…ëª©';
-  document.getElementById('totalS').textContent = currentTab === 'active' ? 'ë³´ìœ  ì¤‘' : 'ì´ìµì‹¤í˜„';
+  document.getElementById('totalC').textContent = items.length + '종목';
+  document.getElementById('totalS').textContent = currentTab === 'active' ? '보유 중' : '이익실현';
   
-  // ì¼ë¶€ì´ìµì‹¤í˜„ (ë§¤ë„ëª©í‘œê°€ ìžˆëŠ” ì¢…ëª©)
+  // 일부이익실현 (매도목표가 있는 종목)
   if (currentTab === 'active') {
     var partial = items.filter(function(h) { return h.sell_target && h.sell_target.length > 0; }).length;
-    document.getElementById('totalS2').textContent = partial > 0 ? 'ì¼ë¶€ìµì ˆ ' + partial + 'ì¢…ëª©' : '';
+    document.getElementById('totalS2').textContent = partial > 0 ? '일부익절 ' + partial + '종목' : '';
   } else {
     document.getElementById('totalS2').textContent = '';
   }
@@ -328,9 +328,9 @@ function renderStats() {
     var av = (tt / cnt).toFixed(2);
     document.getElementById('avgR').textContent = (av >= 0 ? '+' : '') + av + '%';
     document.getElementById('avgR').className = 'vl ' + (av >= 0 ? 'red' : 'blue');
-    document.getElementById('avgS').textContent = cnt + 'ì¢…ëª© ê¸°ì¤€';
+    document.getElementById('avgS').textContent = cnt + '종목 기준';
     document.getElementById('profC').textContent = pf + ' / ' + ls;
-    document.getElementById('profS').textContent = 'ìŠ¹ë¥  ' + (pf / cnt * 100).toFixed(0) + '%';
+    document.getElementById('profS').textContent = '승률 ' + (pf / cnt * 100).toFixed(0) + '%';
     if (mx > -Infinity) {
       document.getElementById('lossC').textContent = '+' + mx.toFixed(2) + '%';
       document.getElementById('lossS').textContent = mxN;
@@ -345,7 +345,7 @@ function renderStats() {
   }
 }
 
-// â”€â”€ ì›”ë³„ í†µê³„ ê³„ì‚° â”€â”€
+// ── 월별 통계 계산 ──
 function getMonthStats(items, month) {
   var mi = items.filter(function(h) { return h.rec_date && h.rec_date.startsWith(month); });
   var cnt = 0, pf = 0, top = [];
@@ -361,7 +361,7 @@ function getMonthStats(items, month) {
 
   var wr = cnt > 0 ? (pf / cnt * 100).toFixed(0) : 0;
   var best = top3.length > 0 ? '+' + top3[0].ret.toFixed(1) + '%' : '-';
-  var names = top3.map(function(t) { return t.name + '(' + (t.ret >= 0 ? '+' : '') + t.ret.toFixed(1) + '%)'; }).join(' Â· ');
+  var names = top3.map(function(t) { return t.name + '(' + (t.ret >= 0 ? '+' : '') + t.ret.toFixed(1) + '%)'; }).join(' · ');
 
   return {
     count: mi.length,
@@ -371,34 +371,34 @@ function getMonthStats(items, month) {
   };
 }
 
-// â”€â”€ í…Œì´ë¸” â”€â”€
+// ── 테이블 ──
 function renderTable() {
   var items = getFilteredItems();
   items = sortItems(items);
 
   if (items.length === 0) {
     document.getElementById('tb').innerHTML =
-      '<tr><td colspan="8" class="no-data">í•´ë‹¹ ì¡°ê±´ì˜ ì¢…ëª©ì´ ì—†ìŠµë‹ˆë‹¤.</td></tr>';
+      '<tr><td colspan="8" class="no-data">해당 조건의 종목이 없습니다.</td></tr>';
     return;
   }
 
   var html = '';
   var lastMonth = '';
-  var allItems = getTabItems(); // ì›”ë³„ í†µê³„ìš©
+  var allItems = getTabItems(); // 월별 통계용
 
   items.forEach(function(h) {
-    // ì›” êµ¬ë¶„ í—¤ë” (ë‚ ì§œ ì •ë ¬ì¼ ë•Œë§Œ)
+    // 월 구분 헤더 (날짜 정렬일 때만)
     if (currentSort === 'date' && h.rec_date) {
       var m = h.rec_date.substring(0, 7);
       if (m !== lastMonth && currentFilter === 'all') {
         lastMonth = m;
         var parts = m.split('-');
-        var mLabel = parts[0] + 'ë…„ ' + parseInt(parts[1]) + 'ì›”';
+        var mLabel = parts[0] + '년 ' + parseInt(parts[1]) + '월';
         var ms = getMonthStats(allItems, m);
         html += '<tr class="month-row"><td colspan="8">' +
           '<span class="month-label">' + mLabel + '</span>' +
-          '<span class="month-stats">' + ms.count + 'ì¢…ëª© Â· ìŠ¹ë¥  ' + ms.winRate + '% Â· ìµœê³  ' + ms.best + '</span>' +
-          '<br><span class="month-top">ðŸ† ' + ms.topNames + '</span>' +
+          '<span class="month-stats">' + ms.count + '종목 · 승률 ' + ms.winRate + '% · 최고 ' + ms.best + '</span>' +
+          '<br><span class="month-top">🏆 ' + ms.topNames + '</span>' +
           '</td></tr>';
       }
     }
@@ -428,7 +428,7 @@ function renderTable() {
 
     var dayH = '';
     if (h.rec_date && h.rec_date.length >= 10) {
-      dayH = '<span class="dc">' + parseInt(h.rec_date.substring(8, 10)) + 'ì¼</span>';
+      dayH = '<span class="dc">' + parseInt(h.rec_date.substring(8, 10)) + '일</span>';
     }
 
     var sellH = h.sell_target ? '<span class="sell-v">' + h.sell_target + '</span>' : '<span style="color:var(--ts)">-</span>';
