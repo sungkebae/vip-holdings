@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🏆 성기배소장 전략 | VIP 보유종목</title>
+<title>VIP PORTFOLIO | 성기배소장 전략</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#ffffff;--sf:#f5f6f8;--sf2:#ebedf2;--bd:#d8dbe5;--tx:#1a1d27;--ts:#6b7280;--ac:#2563eb;--gn:#059669;--rd:#dc2626;--gl:#d97706}
@@ -112,7 +112,7 @@ tbody td{padding:7px 4px;font-size:12px}
 <div class="ct">
 
 <div class="hd">
-<div class="hb">🏆 VIP PORTFOLIO</div>
+<div class="hb">VIP PORTFOLIO</div>
 <h1>성기배소장 전략</h1>
 <div class="hd-sub">단기스윙 시그널 · VIP 보유종목 현황</div>
 </div>
@@ -139,8 +139,8 @@ tbody td{padding:7px 4px;font-size:12px}
 <div class="ctrl" id="ctrlBar">
 <div id="filterBtns"></div>
 <div class="sep"></div>
-<button class="sort-btn" id="sortDate" onclick="toggleSort('date')">📅 추천일 ▼</button>
-<button class="sort-btn" id="sortReturn" onclick="toggleSort('return')">📊 수익률 ▼</button>
+<button class="sort-btn" id="sortDate" onclick="toggleSort('date')">추천일 ▼</button>
+<button class="sort-btn" id="sortReturn" onclick="toggleSort('return')">수익률 ▼</button>
 </div>
 
 <!-- 테이블 -->
@@ -277,8 +277,8 @@ function toggleSort(type) {
   }
   document.getElementById('sortDate').className = 'sort-btn' + (currentSort === 'date' ? ' on' : '');
   document.getElementById('sortReturn').className = 'sort-btn' + (currentSort === 'return' ? ' on' : '');
-  document.getElementById('sortDate').textContent = '📅 추천일' + (currentSort === 'date' ? (sortAsc ? ' ▲' : ' ▼') : '');
-  document.getElementById('sortReturn').textContent = '📊 수익률' + (currentSort === 'return' ? (sortAsc ? ' ▲' : ' ▼') : '');
+  document.getElementById('sortDate').textContent = '추천일' + (currentSort === 'date' ? (sortAsc ? ' ▲' : ' ▼') : '');
+  document.getElementById('sortReturn').textContent = '수익률' + (currentSort === 'return' ? (sortAsc ? ' ▲' : ' ▼') : '');
   renderTable();
 }
 
@@ -406,7 +406,7 @@ function renderTable() {
         html += '<tr class="month-row"><td colspan="8">' +
           '<span class="month-label">' + mLabel + '</span>' +
           '<span class="month-stats">' + ms.count + '종목 · 승률 ' + ms.winRate + '% · 최고 ' + ms.best + '</span>' +
-          '<br><span class="month-top">🏆 ' + ms.topNames + '</span>' +
+          '<br><span class="month-top">' + ms.topNames + '</span>' +
           '</td></tr>';
       }
     }
@@ -438,11 +438,15 @@ function renderTable() {
 
     var sellH = h.sell_target ? '<span class="sell-v">' + h.sell_target + '</span>' : '<span style="color:var(--ts)">-</span>';
     var wtH = h.weight ? '<span class="wt">' + h.weight + '</span>' : '-';
+
+    // ── 비고란 색상 처리 ──
     var noteH = '';
     if (h.note) {
-      if (h.note.indexOf('전량이익실현') >= 0) {
+      if (h.note.indexOf('이익실현') >= 0) {
+        // 이익실현 → 빨간색 굵게
         noteH = '<span class="nt" style="color:var(--rd);font-weight:900">' + h.note + '</span>';
       } else if (h.note.indexOf('손절') >= 0) {
+        // 손절매 → 파란색 굵게
         noteH = '<span class="nt" style="color:var(--ac);font-weight:900">' + h.note + '</span>';
       } else {
         noteH = '<span class="nt">' + h.note + '</span>';
