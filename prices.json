@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-19 16:35:23",
+  "updated_at": "2026-02-19 16:50:21",
   "total_count": 70,
   "active_count": 65,
   "holdings": [
@@ -748,7 +748,7 @@
     {
       "code": "125020",
       "name": "티씨머티리얼즈",
-      "rec_date": "2026-12-26",
+      "rec_date": "2025-12-26",
       "buy_price": 4284,
       "add_buy": 4000,
       "avg_price": 4142,
