@@ -433,18 +433,7 @@ function renderTable() {
 
     var sellH = h.sell_target ? '<span class="sell-v">' + h.sell_target + '</span>' : '<span style="color:var(--ts)">-</span>';
     var wtH = h.weight ? '<span class="wt">' + h.weight + '</span>' : '-';
-    var noteH = '';
-    if (h.note) {
-      if (h.note.indexOf('전량이익실현') >= 0) {
-        noteH = '<span class="nt" style="color:var(--rd);font-weight:900">' + h.note + '</span>';
-      } else if (h.note.indexOf('손절') >= 0) {
-        noteH = '<span class="nt" style="color:var(--ac);font-weight:900">' + h.note + '</span>';
-      } else {
-        noteH = '<span class="nt">' + h.note + '</span>';
-      }
-    } else {
-      noteH = '<span style="color:var(--ts)">-</span>';
-    }
+    var noteH = h.note ? '<span class="nt">' + h.note + '</span>' : '<span style="color:var(--ts)">-</span>';
 
     html += '<tr>' +
       '<td>' + dayH + '</td>' +
