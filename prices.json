@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-20 02:55:36",
+  "updated_at": "2026-02-20 02:59:42",
   "total_count": 70,
   "active_count": 62,
   "holdings": [
@@ -455,11 +455,11 @@
       "code": "010820",
       "name": "퍼스텍",
       "rec_date": "2026-01-21",
-      "buy_price": 44778,
+      "buy_price": 4478,
       "add_buy": 0,
-      "avg_price": 44778,
+      "avg_price": 4478,
       "cur_price": 5330,
-      "return_pct": -88.1,
+      "return_pct": 19.03,
       "sell_target": "",
       "weight": "5~10%",
       "note": "익절후 50%보유",
