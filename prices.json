@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-20 02:34:53",
-  "total_count": 71,
-  "active_count": 63,
+  "updated_at": "2026-02-20 02:46:51",
+  "total_count": 70,
+  "active_count": 62,
   "holdings": [
     {
       "code": "115610",
@@ -371,11 +371,11 @@
       "code": "282880",
       "name": "코윈테크",
       "rec_date": "2026-01-26",
-      "buy_price": 19180,
+      "buy_price": 18090,
       "add_buy": 0,
-      "avg_price": 19180,
+      "avg_price": 18090,
       "cur_price": 17550,
-      "return_pct": -8.5,
+      "return_pct": -2.99,
       "sell_target": "",
       "weight": "5~10%",
       "note": "",
@@ -452,7 +452,7 @@
       "is_active": true
     },
     {
-      "code": "010820a",
+      "code": "010820",
       "name": "퍼스텍",
       "rec_date": "2026-01-21",
       "buy_price": 44778,
@@ -492,20 +492,6 @@
       "weight": "5~10%",
       "note": "1/26 추가매수 전량이익실현",
       "is_active": false
-    },
-    {
-      "code": "484810",
-      "name": "티엑스알로보틱스",
-      "rec_date": "2026-01-21",
-      "buy_price": 20000,
-      "add_buy": 0,
-      "avg_price": 20000,
-      "cur_price": 18880,
-      "return_pct": -5.6,
-      "sell_target": "",
-      "weight": "5~10%",
-      "note": "",
-      "is_active": true
     },
     {
       "code": "491000",
