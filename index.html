@@ -290,8 +290,10 @@ function sortItems(items) {
     });
   } else {
     sorted.sort(function(a, b) {
-      var ra = a.return_pct !== null ? a.return_pct : -9999;
-      var rb = b.return_pct !== null ? b.return_pct : -9999;
+      var ba = a.buy_price || 0, ca = a.cur_price || 0;
+      var bb = b.buy_price || 0, cb = b.cur_price || 0;
+      var ra = (ba > 0 && ca > 0) ? (ca - ba) / ba : -9999;
+      var rb = (bb > 0 && cb > 0) ? (cb - bb) / bb : -9999;
       return sortAsc ? ra - rb : rb - ra;
     });
   }
@@ -304,12 +306,15 @@ function renderStats() {
   var tt = 0, cnt = 0, pf = 0, ls = 0, mx = -Infinity, mxN = '';
 
   items.forEach(function(h) {
-    if (h.return_pct !== null) {
-      tt += h.return_pct;
+    var buy = h.buy_price || 0;
+    var cur = h.cur_price || 0;
+    if (buy > 0 && cur > 0) {
+      var r = Math.round((cur - buy) / buy * 10000) / 100;
+      tt += r;
       cnt++;
-      if (h.return_pct > 0) pf++;
-      if (h.return_pct < 0) ls++;
-      if (h.return_pct > mx) { mx = h.return_pct; mxN = h.name; }
+      if (r > 0) pf++;
+      if (r < 0) ls++;
+      if (r > mx) { mx = r; mxN = h.name; }
     }
   });
 
@@ -350,10 +355,13 @@ function getMonthStats(items, month) {
   var mi = items.filter(function(h) { return h.rec_date && h.rec_date.startsWith(month); });
   var cnt = 0, pf = 0, top = [];
   mi.forEach(function(h) {
-    if (h.return_pct !== null) {
+    var buy = h.buy_price || 0;
+    var cur = h.cur_price || 0;
+    if (buy > 0 && cur > 0) {
+      var r = Math.round((cur - buy) / buy * 10000) / 100;
       cnt++;
-      if (h.return_pct > 0) pf++;
-      top.push({ name: h.name, ret: h.return_pct });
+      if (r > 0) pf++;
+      top.push({ name: h.name, ret: r });
     }
   });
   top.sort(function(a, b) { return b.ret - a.ret; });
@@ -409,10 +417,7 @@ function renderTable() {
     var cur = h.cur_price || 0;
 
     var buyH = '';
-    if (avg > 0 && add > 0) {
-      buyH = '<span class="buy-v">' + avg.toLocaleString() + '</span>' +
-             '<span class="avg-note">' + buy.toLocaleString() + '/' + add.toLocaleString() + '</span>';
-    } else if (buy > 0) {
+    if (buy > 0) {
       buyH = '<span class="buy-v">' + buy.toLocaleString() + '</span>';
     } else {
       buyH = '<span style="color:var(--ts)">-</span>';
@@ -421,8 +426,8 @@ function renderTable() {
     var curH = cur > 0 ? '<span class="cur-v">' + cur.toLocaleString() + '</span>' : '<span style="color:var(--ts)">-</span>';
 
     var retH = '<span class="rb neu">-</span>';
-    if (h.return_pct !== null) {
-      var r = h.return_pct;
+    if (buy > 0 && cur > 0) {
+      var r = Math.round((cur - buy) / buy * 10000) / 100;
       retH = '<span class="rb ' + (r >= 0 ? 'pos' : 'neg') + '">' + (r >= 0 ? '+' : '') + r.toFixed(2) + '%</span>';
     }
 
@@ -433,7 +438,18 @@ function renderTable() {
 
     var sellH = h.sell_target ? '<span class="sell-v">' + h.sell_target + '</span>' : '<span style="color:var(--ts)">-</span>';
     var wtH = h.weight ? '<span class="wt">' + h.weight + '</span>' : '-';
-    var noteH = h.note ? '<span class="nt">' + h.note + '</span>' : '<span style="color:var(--ts)">-</span>';
+    var noteH = '';
+    if (h.note) {
+      if (h.note.indexOf('전량이익실현') >= 0) {
+        noteH = '<span class="nt" style="color:var(--rd);font-weight:900">' + h.note + '</span>';
+      } else if (h.note.indexOf('손절') >= 0) {
+        noteH = '<span class="nt" style="color:var(--ac);font-weight:900">' + h.note + '</span>';
+      } else {
+        noteH = '<span class="nt">' + h.note + '</span>';
+      }
+    } else {
+      noteH = '<span style="color:var(--ts)">-</span>';
+    }
 
     html += '<tr>' +
       '<td>' + dayH + '</td>' +
