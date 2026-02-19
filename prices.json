@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-19 18:33:44",
+  "updated_at": "2026-02-19 18:37:12",
   "total_count": 69,
-  "active_count": 62,
+  "active_count": 59,
   "holdings": [
     {
       "code": "322510",
@@ -14,7 +14,7 @@
       "return_pct": 1.04,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "1회 추가매수",
+      "note": "7500원 1회 추가매수",
       "is_active": true
     },
     {
@@ -57,7 +57,7 @@
       "sell_target": "",
       "weight": "5~10%",
       "note": "",
-      "is_active": true
+      "is_active": false
     },
     {
       "code": "222420",
@@ -169,7 +169,7 @@
       "sell_target": "",
       "weight": "5~10%",
       "note": "",
-      "is_active": true
+      "is_active": false
     },
     {
       "code": "045100",
@@ -183,7 +183,7 @@
       "sell_target": "",
       "weight": "5~10%",
       "note": "",
-      "is_active": true
+      "is_active": false
     },
     {
       "code": "158430",
