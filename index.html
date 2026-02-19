@@ -320,8 +320,7 @@ function renderStats() {
 
   document.getElementById('totalC').textContent = items.length + '종목';
   document.getElementById('totalS').textContent = currentTab === 'active' ? '보유 중' : '이익실현';
-  
-  // 일부이익실현 (매도목표가 있는 종목)
+
   if (currentTab === 'active') {
     var partial = items.filter(function(h) { return h.sell_target && h.sell_target.length > 0; }).length;
     document.getElementById('totalS2').textContent = partial > 0 ? '일부익절 ' + partial + '종목' : '';
@@ -392,10 +391,9 @@ function renderTable() {
 
   var html = '';
   var lastMonth = '';
-  var allItems = getTabItems(); // 월별 통계용
+  var allItems = getTabItems();
 
   items.forEach(function(h) {
-    // 월 구분 헤더 (날짜 정렬일 때만)
     if (currentSort === 'date' && h.rec_date) {
       var m = h.rec_date.substring(0, 7);
       if (m !== lastMonth && currentFilter === 'all') {
@@ -449,7 +447,7 @@ function renderTable() {
         // 손절매 → 파란색 굵게
         noteH = '<span class="nt" style="color:var(--ac);font-weight:900">' + h.note + '</span>';
       } else {
-        noteH = '<span class="nt" style="color:var(--rd);font-weight:900">' + h.note + '</span>';
+        noteH = '<span class="nt">' + h.note + '</span>';
       }
     } else {
       noteH = '<span style="color:var(--ts)">-</span>';
