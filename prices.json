@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-19 19:42:47",
+  "updated_at": "2026-02-19 19:52:55",
   "total_count": 69,
-  "active_count": 22,
+  "active_count": 61,
   "holdings": [
     {
       "code": "322510",
@@ -56,8 +56,8 @@
       "return_pct": 19.87,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "50% 이익실현 50% 보유",
+      "is_active": true
     },
     {
       "code": "222420",
@@ -168,8 +168,8 @@
       "return_pct": 30.16,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "50% 이익실현 50% 보유",
+      "is_active": true
     },
     {
       "code": "045100",
@@ -182,8 +182,8 @@
       "return_pct": 9.45,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "50% 이익실현 50% 보유",
+      "is_active": true
     },
     {
       "code": "158430",
@@ -224,8 +224,8 @@
       "return_pct": 172.56,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "추가 3130원",
-      "is_active": false
+      "note": "추가 3130원 30%보유중",
+      "is_active": true
     },
     {
       "code": "053610",
@@ -266,8 +266,8 @@
       "return_pct": 40.52,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "2회이익실현 40%보유",
+      "is_active": true
     },
     {
       "code": "079370",
@@ -294,8 +294,8 @@
       "return_pct": 32.86,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "익절후 30%보유",
+      "is_active": true
     },
     {
       "code": "041960",
@@ -308,8 +308,8 @@
       "return_pct": 26.14,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "익절후 30%보유",
+      "is_active": true
     },
     {
       "code": "294570",
@@ -364,8 +364,8 @@
       "return_pct": 8.31,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "익절후 30%보유",
+      "is_active": true
     },
     {
       "code": "095500",
@@ -406,8 +406,8 @@
       "return_pct": 19.78,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "9500원 추가매수",
-      "is_active": false
+      "note": "9500원 추가매수 익절후 30%보유",
+      "is_active": true
     },
     {
       "code": "046940",
@@ -420,8 +420,8 @@
       "return_pct": 12.94,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "익절후 30%보유",
+      "is_active": true
     },
     {
       "code": "010820a",
@@ -434,8 +434,8 @@
       "return_pct": -88.1,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "익절후 50%보유",
+      "is_active": true
     },
     {
       "code": "046120",
@@ -462,7 +462,7 @@
       "return_pct": 3.77,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "1/26 추가매수",
+      "note": "1/26 추가매수 전량이익실현",
       "is_active": false
     },
     {
@@ -504,8 +504,8 @@
       "return_pct": 212.05,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "익절후 30%보유",
+      "is_active": true
     },
     {
       "code": "083650",
@@ -518,8 +518,8 @@
       "return_pct": 37.65,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "익절후 50% 보유",
+      "is_active": true
     },
     {
       "code": "006910",
@@ -532,8 +532,8 @@
       "return_pct": 60.21,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "017960",
@@ -560,8 +560,8 @@
       "return_pct": 12.08,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "003160",
@@ -574,8 +574,8 @@
       "return_pct": 26.91,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "211270",
@@ -588,8 +588,8 @@
       "return_pct": 26.0,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "298830",
@@ -602,8 +602,8 @@
       "return_pct": -1.79,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "025820",
@@ -630,8 +630,8 @@
       "return_pct": 9.96,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "478340",
@@ -644,8 +644,8 @@
       "return_pct": 85.73,
       "sell_target": "",
       "weight": "5%",
-      "note": "장기 보유",
-      "is_active": false
+      "note": "장기 보유 30%보유",
+      "is_active": true
     },
     {
       "code": "067830",
@@ -672,8 +672,8 @@
       "return_pct": 77.41,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "1200원 추가",
-      "is_active": false
+      "note": "1200원 추가 30%보유",
+      "is_active": true
     },
     {
       "code": "417010",
@@ -686,8 +686,8 @@
       "return_pct": 74.2,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "중장기",
-      "is_active": false
+      "note": "중장기 30%보유",
+      "is_active": true
     },
     {
       "code": "010580",
@@ -714,8 +714,8 @@
       "return_pct": 65.42,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "309960",
@@ -728,8 +728,8 @@
       "return_pct": 25.34,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "125020",
@@ -756,8 +756,8 @@
       "return_pct": 35.69,
       "sell_target": "",
       "weight": "5%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "100790",
@@ -770,8 +770,8 @@
       "return_pct": 75.5,
       "sell_target": "",
       "weight": "5%",
-      "note": "11500원 추가",
-      "is_active": false
+      "note": "11500원 추가 30%보유",
+      "is_active": true
     },
     {
       "code": "000050",
@@ -784,8 +784,8 @@
       "return_pct": 14.27,
       "sell_target": "",
       "weight": "5%",
-      "note": "8500원 추가",
-      "is_active": false
+      "note": "8500원 추가 30%보유",
+      "is_active": true
     },
     {
       "code": "002800",
@@ -812,8 +812,8 @@
       "return_pct": 23.82,
       "sell_target": "",
       "weight": "5%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "007340",
@@ -826,8 +826,8 @@
       "return_pct": 28.63,
       "sell_target": "",
       "weight": "5%",
-      "note": "추가 25000",
-      "is_active": false
+      "note": "추가 25000 30%보유",
+      "is_active": true
     },
     {
       "code": "456070",
@@ -840,8 +840,8 @@
       "return_pct": 4.91,
       "sell_target": "",
       "weight": "5%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "488900",
@@ -854,8 +854,8 @@
       "return_pct": 107.01,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "009070",
@@ -868,8 +868,8 @@
       "return_pct": 12.97,
       "sell_target": "",
       "weight": "5%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "038500",
@@ -882,8 +882,8 @@
       "return_pct": 181.6,
       "sell_target": "",
       "weight": "5%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "004960",
@@ -896,8 +896,8 @@
       "return_pct": 26.57,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "추가 10000원",
-      "is_active": false
+      "note": "추가 10000원 30%보유",
+      "is_active": true
     },
     {
       "code": "365270",
@@ -910,8 +910,8 @@
       "return_pct": 118.28,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "3회 분할",
-      "is_active": false
+      "note": "3회 분할 30%보유",
+      "is_active": true
     },
     {
       "code": "264850",
@@ -924,8 +924,8 @@
       "return_pct": 25.0,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "눌림목 5800원",
-      "is_active": false
+      "note": "눌림목 5800원 30%보유",
+      "is_active": true
     },
     {
       "code": "001440",
@@ -938,8 +938,8 @@
       "return_pct": 36.04,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "3회 분할",
-      "is_active": false
+      "note": "3회 분할 30%보유",
+      "is_active": true
     },
     {
       "code": "347700",
@@ -952,8 +952,8 @@
       "return_pct": 296.58,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     },
     {
       "code": "085910",
@@ -966,8 +966,8 @@
       "return_pct": 111.94,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
-      "is_active": false
+      "note": "30%보유",
+      "is_active": true
     }
   ]
 }
