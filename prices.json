@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-19 16:01:56",
-  "total_count": 69,
-  "active_count": 64,
+  "updated_at": "2026-02-19 16:13:56",
+  "total_count": 70,
+  "active_count": 65,
   "holdings": [
     {
       "code": "322510",
@@ -15,6 +15,20 @@
       "sell_target": "",
       "weight": "5~10%",
       "note": "1회 추가매수",
+      "is_active": true
+    },
+    {
+      "code": "457370",
+      "name": "한켐",
+      "rec_date": "2026-02-19",
+      "buy_price": 9725,
+      "add_buy": 0,
+      "avg_price": 9725,
+      "cur_price": 10080,
+      "return_pct": 3.65,
+      "sell_target": "",
+      "weight": "5~10%",
+      "note": "50% 이익실현 50% 보유",
       "is_active": true
     },
     {
@@ -56,7 +70,7 @@
       "return_pct": 0.86,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
+      "note": "전량이익실현",
       "is_active": false
     },
     {
@@ -126,7 +140,7 @@
       "return_pct": 19.88,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
+      "note": "전량이익실현",
       "is_active": true
     },
     {
@@ -284,6 +298,20 @@
       "is_active": true
     },
     {
+      "code": "340810",
+      "name": "시선AI",
+      "rec_date": "2026-01-28",
+      "buy_price": 3885,
+      "add_buy": 0,
+      "avg_price": 3885,
+      "cur_price": 3180,
+      "return_pct": -18.15,
+      "sell_target": "",
+      "weight": "5~10%",
+      "note": "단기 3~4일 / 조정시 추가매수aotnr",
+      "is_active": true
+    },
+    {
       "code": "041960",
       "name": "코미팜",
       "rec_date": "2026-01-27",
@@ -295,20 +323,6 @@
       "sell_target": "",
       "weight": "5~10%",
       "note": "",
-      "is_active": true
-    },
-    {
-      "code": "457370",
-      "name": "한켐",
-      "rec_date": "2026-02-19",
-      "buy_price": 9725,
-      "add_buy": 0,
-      "avg_price": 9725,
-      "cur_price": 10080,
-      "return_pct": 3.65,
-      "sell_target": "",
-      "weight": "5~10%",
-      "note": "50% 이익실현 50% 보유",
       "is_active": true
     },
     {
@@ -343,11 +357,11 @@
       "code": "282880",
       "name": "코윈테크",
       "rec_date": "2026-01-26",
-      "buy_price": 18090,
+      "buy_price": 19180,
       "add_buy": 0,
-      "avg_price": 18090,
+      "avg_price": 19180,
       "cur_price": 17550,
-      "return_pct": -2.99,
+      "return_pct": -8.5,
       "sell_target": "",
       "weight": "5~10%",
       "note": "",
@@ -546,7 +560,7 @@
       "return_pct": 2.66,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "2/9 전량이익실현",
+      "note": "전량이익실현",
       "is_active": false
     },
     {
@@ -616,7 +630,7 @@
       "return_pct": -2.64,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
+      "note": "전량이익실현",
       "is_active": false
     },
     {
@@ -658,7 +672,7 @@
       "return_pct": 7.18,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
+      "note": "손절처리",
       "is_active": true
     },
     {
@@ -700,7 +714,7 @@
       "return_pct": 3.33,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "",
+      "note": "전량이익실현",
       "is_active": false
     },
     {
@@ -734,7 +748,7 @@
     {
       "code": "125020",
       "name": "티씨머티리얼즈",
-      "rec_date": "2025-12-26",
+      "rec_date": "2026-12-26",
       "buy_price": 4284,
       "add_buy": 4000,
       "avg_price": 4142,
@@ -798,7 +812,7 @@
       "return_pct": 5.48,
       "sell_target": "",
       "weight": "5%",
-      "note": "",
+      "note": "전량이익실현",
       "is_active": false
     },
     {
