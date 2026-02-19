@@ -209,10 +209,10 @@ function buildFilters(){
   items.forEach(function(h){if(h.rec_date){var m=h.rec_date.substring(0,7);months[m]=(months[m]||0)+1;}});
   var sorted=Object.keys(months).sort().reverse();
   var total=items.length;
-  var html='<button class="fbtn '+(currentFilter==='all'?'active':'')+'" onclick="setFilter(\'all\')">전체 ('+total+')</button>';
+  var html='<button class="fbtn '+(currentFilter==='all'?'active':'')+'" onclick="setFilter(\'all\')">전체 ('+total+'종목)</button>';
   sorted.forEach(function(m){
     var parts=m.split('-');
-    var label=parseInt(parts[1])+'월 ('+months[m]+')';
+    var label=parseInt(parts[1])+'월 ('+months[m]+'종목)';
     html+='<button class="fbtn '+(currentFilter===m?'active':'')+'" onclick="setFilter(\''+m+'\')">'+label+'</button>';
   });
   document.getElementById('filterBtns').innerHTML=html;
