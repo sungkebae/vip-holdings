@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-20 02:18:08",
+  "updated_at": "2026-02-20 02:25:59",
   "total_count": 71,
   "active_count": 63,
   "holdings": [
@@ -18,14 +18,14 @@
       "is_active": true
     },
     {
-      "code": "000700",
+      "code": "0007C0",
       "name": "아크릴",
       "rec_date": "2026-02-19",
       "buy_price": 47700,
       "add_buy": 0,
       "avg_price": 47700,
-      "cur_price": 6610,
-      "return_pct": -86.14,
+      "cur_price": 0,
+      "return_pct": null,
       "sell_target": "",
       "weight": "5~10%",
       "note": "",
