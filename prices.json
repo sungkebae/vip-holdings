@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-19 16:58:54",
+  "updated_at": "2026-02-19 17:06:05",
   "total_count": 70,
-  "active_count": 65,
+  "active_count": 63,
   "holdings": [
     {
       "code": "322510",
@@ -20,7 +20,7 @@
     {
       "code": "457370",
       "name": "한켐",
-      "rec_date": "2026-02-19",
+      "rec_date": "2026-01-23",
       "buy_price": 9725,
       "add_buy": 0,
       "avg_price": 9725,
@@ -141,7 +141,7 @@
       "sell_target": "",
       "weight": "5~10%",
       "note": "전량이익실현",
-      "is_active": true
+      "is_active": false
     },
     {
       "code": "253590",
@@ -673,7 +673,7 @@
       "sell_target": "",
       "weight": "5~10%",
       "note": "손절처리",
-      "is_active": true
+      "is_active": false
     },
     {
       "code": "225190",
