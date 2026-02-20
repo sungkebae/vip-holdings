@@ -44,14 +44,18 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 .tw{background:var(--sf);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
 .tsc{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:15px;table-layout:fixed}
-th:nth-child(1),td:nth-child(1){width:75px}
-th:nth-child(2),td:nth-child(2){width:200px}
-th:nth-child(3),td:nth-child(3){width:120px}
-th:nth-child(4),td:nth-child(4){width:110px}
-th:nth-child(5),td:nth-child(5){width:110px}
-th:nth-child(6),td:nth-child(6){width:85px}
-th:nth-child(7),td:nth-child(7){width:100px}
-th:nth-child(8),td:nth-child(8){width:auto;text-align:left;padding-left:14px}
+th:nth-child(1),td:nth-child(1){width:70px}
+th:nth-child(2),td:nth-child(2){width:150px}
+th:nth-child(3),td:nth-child(3){width:90px}
+th:nth-child(4),td:nth-child(4){width:90px}
+th:nth-child(5),td:nth-child(5){width:90px}
+th:nth-child(6),td:nth-child(6){width:90px}
+th:nth-child(7),td:nth-child(7){width:90px}
+th:nth-child(8),td:nth-child(8){width:80px}
+th:nth-child(9),td:nth-child(9){width:80px}
+th:nth-child(10),td:nth-child(10){width:80px}
+th:nth-child(11),td:nth-child(11){width:70px}
+th:nth-child(12),td:nth-child(12){width:auto;text-align:left;padding-left:14px}
 thead th{background:var(--sf2);padding:6px 2px;text-align:center;font-weight:600;font-size:13px;color:var(--ts);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);white-space:nowrap;position:sticky;top:0;z-index:10}
 thead th:last-child{border-right:none}
 thead th.sell-hd{color:var(--gn)}
@@ -134,7 +138,7 @@ thead th,tbody td{padding:6px 2px;font-size:12px;text-align:center}
 <div class="lg-i"><div class="lg-d" style="background:var(--tx)"></div><span style="color:var(--ts)">매수가</span></div>
 <div class="lg-i"><div class="lg-d" style="background:var(--gl)"></div><span style="color:var(--ts)">현재가</span></div>
 <div class="lg-i"><div class="lg-d" style="background:var(--rd)"></div><span style="color:var(--ts)">수익률</span></div>
-<div class="lg-i"><div class="lg-d" style="background:var(--gn)"></div><span style="color:var(--ts)">익절가격</span></div>
+<div class="lg-i"><div class="lg-d" style="background:var(--gn)"></div><span style="color:var(--ts)">매도가</span></div>
 </div>
 
 <!-- 탭 -->
@@ -159,12 +163,16 @@ thead th,tbody td{padding:6px 2px;font-size:12px;text-align:center}
 <th>수익률</th>
 <th>현재가</th>
 <th>매수가</th>
+<th>평균단가</th>
+<th>추가매수</th>
+<th class="sell-hd">1차매도</th>
+<th class="sell-hd">2차매도</th>
+<th class="sell-hd">3차매도</th>
 <th>비중</th>
-<th class="sell-hd">익절가격</th>
 <th>비고</th>
 </tr></thead>
 <tbody id="tb">
-<tr><td colspan="8" class="loading"><div class="loading-spin"></div><br>데이터를 불러오는 중...</td></tr>
+<tr><td colspan="12" class="loading"><div class="loading-spin"></div><br>데이터를 불러오는 중...</td></tr>
 </tbody>
 </table>
 </div></div>
@@ -192,7 +200,7 @@ async function loadData(){
     renderAll();
   }catch(e){
     console.error(e);
-    document.getElementById('tb').innerHTML='<tr><td colspan="8" class="no-data">데이터를 불러올 수 없습니다.</td></tr>';
+    document.getElementById('tb').innerHTML='<tr><td colspan="12" class="no-data">데이터를 불러올 수 없습니다.</td></tr>';
   }
 }
 
@@ -303,7 +311,7 @@ function getMonthStats(items,month){
 
 function renderTable(){
   var items=getFilteredItems();items=sortItems(items);
-  if(items.length===0){document.getElementById('tb').innerHTML='<tr><td colspan="8" class="no-data">해당 조건의 종목이 없습니다.</td></tr>';return;}
+  if(items.length===0){document.getElementById('tb').innerHTML='<tr><td colspan="12" class="no-data">해당 조건의 종목이 없습니다.</td></tr>';return;}
   var html='',lastMonth='',allItems=getTabItems();
   items.forEach(function(h){
     if(currentSort==='date'&&h.rec_date){
@@ -312,7 +320,7 @@ function renderTable(){
         lastMonth=m;var parts=m.split('-');
         var mLabel='\ud83d\udcc5 '+parts[0]+'\ub144 '+parseInt(parts[1])+'\uc6d4';
         var ms=getMonthStats(allItems,m);
-        html+='<tr class="mh"><td colspan="8">'+mLabel+' <span style="font-size:13px;color:var(--ts);font-weight:400;margin-left:10px">'+ms.count+'\uc885\ubaa9 \u00b7 \uc2b9\ub960 '+ms.winRate+'% \u00b7 \ucd5c\uace0 '+ms.best+'</span><br><span style="font-size:13px;color:var(--gn);font-weight:600">'+ms.topNames+'</span></td></tr>';
+        html+='<tr class="mh"><td colspan="12">'+mLabel+' <span style="font-size:13px;color:var(--ts);font-weight:400;margin-left:10px">'+ms.count+'\uc885\ubaa9 \u00b7 \uc2b9\ub960 '+ms.winRate+'% \u00b7 \ucd5c\uace0 '+ms.best+'</span><br><span style="font-size:13px;color:var(--gn);font-weight:600">'+ms.topNames+'</span></td></tr>';
       }
     }
     var buy=h.buy_price||0,cur=h.cur_price||0;
@@ -323,13 +331,17 @@ function renderTable(){
     var curH=cur>0?'<span class="cur-v">'+cur.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
     var buyH=buy>0?'<span class="buy-v">'+buy.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
     var wtH=h.weight?'<span class="wt">'+h.weight+'</span>':'-';
-    var pftH=h.sell_target?'<span class="pft-v">'+h.sell_target+'</span>':'<span style="color:var(--ts)">-</span>';
+    var avgH=h.avg_price&&h.avg_price>0?'<span class="buy-v">'+h.avg_price.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
+    var addH=h.add_buy&&h.add_buy>0?'<span class="buy-v">'+h.add_buy.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
+    var s1H=h.sell1?'<span class="pft-v">'+h.sell1+'</span>':'<span style="color:var(--ts)">-</span>';
+    var s2H=h.sell2?'<span class="pft-v">'+h.sell2+'</span>':'<span style="color:var(--ts)">-</span>';
+    var s3H=h.sell3?'<span class="pft-v">'+h.sell3+'</span>':'<span style="color:var(--ts)">-</span>';
     var noteH='';
     if(h.note){
       if(h.note.indexOf('\uc190\uc808')>=0){noteH='<span class="nt" style="color:var(--ac);font-weight:900">'+h.note+'</span>';}
       else{noteH='<span class="nt" style="color:var(--rd);font-weight:900">'+h.note+'</span>';}
     }else{noteH='<span style="color:var(--ts)">-</span>';}
-    html+='<tr><td>'+dayH+'</td><td style="text-align:left;padding-left:14px"><span class="sn">'+h.name+'</span><span class="scode">'+h.code+'</span></td><td>'+retH+'</td><td>'+curH+'</td><td>'+buyH+'</td><td>'+wtH+'</td><td>'+pftH+'</td><td>'+noteH+'</td></tr>';
+    html+='<tr><td>'+dayH+'</td><td style="text-align:left;padding-left:14px"><span class="sn">'+h.name+'</span><span class="scode">'+h.code+'</span></td><td>'+retH+'</td><td>'+curH+'</td><td>'+buyH+'</td><td>'+avgH+'</td><td>'+addH+'</td><td>'+s1H+'</td><td>'+s2H+'</td><td>'+s3H+'</td><td>'+wtH+'</td><td>'+noteH+'</td></tr>';
   });
   document.getElementById('tb').innerHTML=html;
 }
