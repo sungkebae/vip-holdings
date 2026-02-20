@@ -43,11 +43,19 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 
 .tw{background:var(--sf);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
 .tsc{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:15px}
-thead th{background:var(--sf2);padding:16px 12px;text-align:center;font-weight:600;font-size:13px;color:var(--ts);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);white-space:nowrap;position:sticky;top:0;z-index:10}
+table{width:100%;border-collapse:collapse;font-size:15px;table-layout:fixed}
+th:nth-child(1),td:nth-child(1){width:48px}
+th:nth-child(2),td:nth-child(2){width:120px}
+th:nth-child(3),td:nth-child(3){width:75px}
+th:nth-child(4),td:nth-child(4){width:68px}
+th:nth-child(5),td:nth-child(5){width:68px}
+th:nth-child(6),td:nth-child(6){width:58px}
+th:nth-child(7),td:nth-child(7){width:68px}
+th:nth-child(8),td:nth-child(8){width:auto}
+thead th{background:var(--sf2);padding:6px 2px;text-align:center;font-weight:600;font-size:13px;color:var(--ts);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);white-space:nowrap;position:sticky;top:0;z-index:10}
 thead th:last-child{border-right:none}
 thead th.sell-hd{color:var(--gn)}
-tbody td{padding:14px 12px;border-bottom:1px solid rgba(45,51,72,.5);border-right:1px solid rgba(45,51,72,.3);vertical-align:middle;white-space:nowrap;text-align:center}
+tbody td{padding:6px 2px;border-bottom:1px solid rgba(45,51,72,.5);border-right:1px solid rgba(45,51,72,.3);vertical-align:middle;white-space:nowrap;text-align:center}
 tbody td:last-child{border-right:none}
 tbody tr{transition:background .15s}
 tbody tr:hover{background:rgba(79,140,255,.05)}
@@ -66,7 +74,7 @@ tbody tr:last-child td{border-bottom:none}
 .rb.neu{color:var(--ts)}
 
 .wt{display:inline-block;background:rgba(79,140,255,.12);color:var(--ac);padding:4px 10px;border-radius:4px;font-size:14px;font-weight:600}
-.nt{font-size:13px;max-width:180px;white-space:normal;line-height:1.4;text-align:left}
+.nt{font-size:13px;max-width:none;white-space:normal;line-height:1.4;text-align:left}
 
 .mh td{background:var(--sf2);padding:14px 12px;font-weight:700;font-size:16px;color:var(--ac);border-bottom:1px solid var(--bd);text-align:left}
 
@@ -82,10 +90,10 @@ tbody tr:last-child td{border-bottom:none}
 .hd h1{font-size:28px}
 .sm{grid-template-columns:repeat(2,1fr);gap:8px}
 .sc .vl{font-size:22px}
-thead th,tbody td{padding:10px 6px;font-size:12px;text-align:center}
+thead th,tbody td{padding:6px 2px;font-size:12px;text-align:center}
 .rb{font-size:12px;min-width:60px;padding:4px 6px}
 .sn{font-size:14px}
-.nt{max-width:120px;font-size:11px}
+.nt{max-width:none;font-size:11px}
 .tab{padding:8px 14px;font-size:14px}
 .mh td{font-size:14px;padding:10px 12px}
 }
