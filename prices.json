@@ -1,8 +1,22 @@
 {
-  "updated_at": "2026-02-20 12:10:39",
-  "total_count": 70,
-  "active_count": 62,
+  "updated_at": "2026-02-20 12:11:34",
+  "total_count": 71,
+  "active_count": 63,
   "holdings": [
+    {
+      "code": "047310",
+      "name": "파워로직스",
+      "rec_date": "2026-02-20",
+      "buy_price": 6270,
+      "add_buy": 0,
+      "avg_price": 6270,
+      "cur_price": 0,
+      "return_pct": null,
+      "sell_target": "5~10%",
+      "weight": "",
+      "note": "Y",
+      "is_active": true
+    },
     {
       "code": "115610",
       "name": "이미지스",
