@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-20 16:55:19",
+  "updated_at": "2026-02-21 00:11:05",
   "total_count": 71,
   "active_count": 63,
   "holdings": [
@@ -28,7 +28,7 @@
       "return_pct": -5.0,
       "sell_target": "",
       "weight": "5~10%",
-      "note": "1회 추가매수 예정",
+      "note": "절반 익절이후 1회 추가매수 예정",
       "is_active": true
     },
     {
