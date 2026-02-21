@@ -28,19 +28,18 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);co
 .tw{background:var(--sf);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
 .tsc{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:15px;table-layout:fixed}
-th:nth-child(1),td:nth-child(1){width:7.14%}
-th:nth-child(2),td:nth-child(2){width:7.14%}
-th:nth-child(3),td:nth-child(3){width:7.14%}
-th:nth-child(4),td:nth-child(4){width:7.14%}
-th:nth-child(5),td:nth-child(5){width:7.14%}
-th:nth-child(6),td:nth-child(6){width:7.14%}
-th:nth-child(7),td:nth-child(7){width:7.14%}
-th:nth-child(8),td:nth-child(8){width:7.14%}
-th:nth-child(9),td:nth-child(9){width:7.14%}
-th:nth-child(10),td:nth-child(10){width:7.14%}
-th:nth-child(11),td:nth-child(11){width:7.14%}
-th:nth-child(12),td:nth-child(12){width:7.14%}
-th:nth-child(13),td:nth-child(13){width:14.46%;text-align:left;padding-left:10px}
+th:nth-child(1),td:nth-child(1){width:7.69%}
+th:nth-child(2),td:nth-child(2){width:7.69%}
+th:nth-child(3),td:nth-child(3){width:7.69%}
+th:nth-child(4),td:nth-child(4){width:7.69%}
+th:nth-child(5),td:nth-child(5){width:7.69%}
+th:nth-child(6),td:nth-child(6){width:7.69%}
+th:nth-child(7),td:nth-child(7){width:7.69%}
+th:nth-child(8),td:nth-child(8){width:7.69%}
+th:nth-child(9),td:nth-child(9){width:7.69%}
+th:nth-child(10),td:nth-child(10){width:7.69%}
+th:nth-child(11),td:nth-child(11){width:7.69%}
+th:nth-child(12),td:nth-child(12){width:15.41%;text-align:left;padding-left:10px}
 thead th{background:var(--sf2);padding:6px 2px;text-align:center;font-weight:600;font-size:13px;color:var(--ts);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);white-space:nowrap;position:sticky;top:0;z-index:10}
 thead th:last-child{border-right:none}
 thead th.sell-hd{color:var(--gn)}
@@ -122,7 +121,6 @@ td:nth-child(2) br{display:none}
 <th>추천일</th>
 <th style="text-align:left;padding-left:10px">종목명</th>
 <th>수익률</th>
-<th>최고수익</th>
 <th>현재가</th>
 <th>매수가</th>
 <th>평균단가</th>
@@ -134,13 +132,13 @@ td:nth-child(2) br{display:none}
 <th>비고</th>
 </tr></thead>
 <tbody id="tb">
-<tr><td colspan="13" class="loading"><div class="loading-spin"></div><br>데이터를 불러오는 중...</td></tr>
+<tr><td colspan="12" class="loading"><div class="loading-spin"></div><br>데이터를 불러오는 중...</td></tr>
 </tbody>
 </table>
 </div></div>
 <div class="ft">
 <div>🎖️ 성기배소장 전략 | 단기스윙 시그널</div>
-<div style="margin-top:4px">수익률 = (현재가 − 평균단가) ÷ 평균단가 | 최고수익 = (추천일 이후 최고가 − 평균단가) ÷ 평균단가</div>
+<div style="margin-top:4px">수익률 = (현재가 − 평균단가) ÷ 평균단가</div>
 </div>
 </div>
 <script>
@@ -158,7 +156,7 @@ async function loadData(){
     renderAll();
   }catch(e){
     console.error(e);
-    document.getElementById('tb').innerHTML='<tr><td colspan="13" class="no-data">데이터를 불러올 수 없습니다.</td></tr>';
+    document.getElementById('tb').innerHTML='<tr><td colspan="12" class="no-data">데이터를 불러올 수 없습니다.</td></tr>';
   }
 }
 
@@ -236,7 +234,7 @@ function getMonthStats(items,month){
 
 function renderTable(){
   var items=getFilteredItems();items=sortItems(items);
-  if(items.length===0){document.getElementById('tb').innerHTML='<tr><td colspan="13" class="no-data">해당 조건의 종목이 없습니다.</td></tr>';return;}
+  if(items.length===0){document.getElementById('tb').innerHTML='<tr><td colspan="12" class="no-data">해당 조건의 종목이 없습니다.</td></tr>';return;}
   var html='',lastMonth='',allItems=getItems();
   items.forEach(function(h){
     if(currentSort==='date'&&h.rec_date){
@@ -245,7 +243,7 @@ function renderTable(){
         lastMonth=m;var parts=m.split('-');
         var mLabel='\ud83d\udcc5 '+parts[0]+'\ub144 '+parseInt(parts[1])+'\uc6d4';
         var ms=getMonthStats(allItems,m);
-        html+='<tr class="mh"><td colspan="13">'+mLabel+' <span style="font-size:13px;color:var(--ts);font-weight:400;margin-left:10px">'+ms.count+'\uc885\ubaa9 \u00b7 \uc2b9\ub960 '+ms.winRate+'% \u00b7 \ucd5c\uace0 '+ms.best+'</span><br><span style="font-size:13px;color:var(--gn);font-weight:600">'+ms.topNames+'</span></td></tr>';
+        html+='<tr class="mh"><td colspan="12">'+mLabel+' <span style="font-size:13px;color:var(--ts);font-weight:400;margin-left:10px">'+ms.count+'\uc885\ubaa9 \u00b7 \uc2b9\ub960 '+ms.winRate+'% \u00b7 \ucd5c\uace0 '+ms.best+'</span><br><span style="font-size:13px;color:var(--gn);font-weight:600">'+ms.topNames+'</span></td></tr>';
       }
     }
     var avg=h.avg_price||h.buy_price||0;
@@ -261,11 +259,7 @@ function renderTable(){
       retH='<span class="rb '+cl+'">'+sg+r.toFixed(2)+'%</span>';
       mRetH='<span class="m-ret '+cl+'">'+sg+r.toFixed(2)+'%</span>';
     }
-    var pkRetH='<span class="rb neu">-</span>';
-    if(h.peak_return_pct!=null){
-      var pkCl=h.peak_return_pct>=0?'pos':'neg';var pkSg=h.peak_return_pct>=0?'+':'';
-      pkRetH='<span class="rb '+pkCl+'">'+pkSg+h.peak_return_pct.toFixed(2)+'%</span>';
-    }
+
     var curH=cur>0?'<span class="cur-v">'+cur.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
     var buyH=buy>0?'<span class="buy-v">'+buy.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
     var avgH=avg>0?'<span class="avg-v">'+avg.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
@@ -280,7 +274,7 @@ function renderTable(){
       else{noteH='<span class="nt" style="color:var(--rd);font-weight:900">'+h.note+'</span>';}
     }else{noteH='<span style="color:var(--ts)">-</span>';}
     var nameCell='<span class="sn">'+h.name+'</span><span class="scode">'+h.code+'</span><br>'+mRetH;
-    html+='<tr><td>'+dayH+'</td><td style="text-align:left;padding-left:10px">'+nameCell+'</td><td>'+retH+'</td><td>'+pkRetH+'</td><td>'+curH+'</td><td>'+buyH+'</td><td>'+avgH+'</td><td>'+addH+'</td><td>'+s1H+'</td><td>'+s2H+'</td><td>'+s3H+'</td><td>'+wtH+'</td><td>'+noteH+'</td></tr>';
+    html+='<tr><td>'+dayH+'</td><td style="text-align:left;padding-left:10px">'+nameCell+'</td><td>'+retH+'</td><td>'+curH+'</td><td>'+buyH+'</td><td>'+avgH+'</td><td>'+addH+'</td><td>'+s1H+'</td><td>'+s2H+'</td><td>'+s3H+'</td><td>'+wtH+'</td><td>'+noteH+'</td></tr>';
   });
   document.getElementById('tb').innerHTML=html;
 }
