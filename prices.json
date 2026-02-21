@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-21 19:37:06",
-  "total_count": 66,
-  "active_count": 58,
+  "updated_at": "2026-02-21 19:39:37",
+  "total_count": 65,
+  "active_count": 57,
   "holdings": [
     {
       "code": "100840",
@@ -114,20 +114,6 @@
       "weight": "5~10%",
       "note": "전량이익실현",
       "is_active": false
-    },
-    {
-      "code": "253590",
-      "name": "네오셈",
-      "rec_date": "2026-02-09",
-      "buy_price": 17390,
-      "add_buy": 17390,
-      "avg_price": 17390,
-      "cur_price": 16210,
-      "return_pct": -6.79,
-      "sell_target": "",
-      "weight": "5~10%",
-      "note": "추가매수 평단 17390원",
-      "is_active": true
     },
     {
       "code": "086390",
