@@ -144,7 +144,7 @@ td:nth-child(2) br{display:none}
 </div>
 </div>
 <script>
-var JSON_URL='./prices.json';
+var JSON_URL='./prices_new.json';
 var DATA=null;
 var currentFilter='all';
 var currentSort='date';
@@ -169,7 +169,7 @@ function renderAll(){
 
 function getItems(){
   if(!DATA)return[];
-  return DATA.holdings.filter(function(h){return h.is_active;});
+  return DATA.holdings;
 }
 
 function getFilteredItems(){
