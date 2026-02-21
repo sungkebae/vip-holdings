@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏆 성기배소장 전략 | 신규 추천 종목</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f1117;--sf:#1a1d27;--sf2:#232735;--bd:#2d3348;--tx:#e8eaed;--ts:#8b91a8;--ac:#4f8cff;--gn:#00d68f;--gd:rgba(0,214,143,.12);--rd:#ff4d6a;--rdd:rgba(255,77,106,.12);--gl:#ffc845;--gld:rgba(255,200,69,.12);--pp:#a78bfa;--ppd:rgba(167,139,250,.12)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+.ct{max-width:1600px;margin:0 auto;padding:32px 20px 80px}
+.hd{text-align:center;margin-bottom:32px;padding:40px 0 32px}
+.hb{display:inline-flex;align-items:center;gap:6px;background:var(--gld);color:var(--gl);padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;margin-bottom:16px}
+.hd h1{font-size:42px;font-weight:900;margin-bottom:8px}
+.hd-sub{color:var(--ts);font-size:18px}
+.fb{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;align-items:center}
+.fbtn{background:var(--sf);border:1px solid var(--bd);color:var(--ts);padding:10px 20px;border-radius:8px;font-size:15px;font-family:inherit;cursor:pointer;font-weight:500;transition:all .2s}
+.fbtn:hover{border-color:var(--ac);color:var(--tx)}
+.fbtn.active{background:var(--ac);border-color:var(--ac);color:white}
+.sort-btn{background:var(--sf);border:1px solid var(--bd);color:var(--tx);padding:10px 20px;border-radius:8px;font-size:15px;font-family:inherit;cursor:pointer;font-weight:600;transition:all .2s}
+.sort-btn:hover{background:var(--sf2)}
+.sort-btn.on{background:var(--rd);border-color:var(--rd);color:white}
+.sep{width:1px;height:24px;background:var(--bd);margin:0 4px}
+.lg{display:flex;gap:18px;margin-bottom:18px;flex-wrap:wrap;font-size:14px}
+.lg-i{display:flex;align-items:center;gap:6px}
+.lg-d{width:12px;height:12px;border-radius:3px}
+.tw{background:var(--sf);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+.tsc{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px;table-layout:fixed}
+th:nth-child(1),td:nth-child(1){width:7.14%}
+th:nth-child(2),td:nth-child(2){width:7.14%}
+th:nth-child(3),td:nth-child(3){width:7.14%}
+th:nth-child(4),td:nth-child(4){width:7.14%}
+th:nth-child(5),td:nth-child(5){width:7.14%}
+th:nth-child(6),td:nth-child(6){width:7.14%}
+th:nth-child(7),td:nth-child(7){width:7.14%}
+th:nth-child(8),td:nth-child(8){width:7.14%}
+th:nth-child(9),td:nth-child(9){width:7.14%}
+th:nth-child(10),td:nth-child(10){width:7.14%}
+th:nth-child(11),td:nth-child(11){width:7.14%}
+th:nth-child(12),td:nth-child(12){width:7.14%}
+th:nth-child(13),td:nth-child(13){width:14.46%;text-align:left;padding-left:10px}
+thead th{background:var(--sf2);padding:6px 2px;text-align:center;font-weight:600;font-size:13px;color:var(--ts);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);white-space:nowrap;position:sticky;top:0;z-index:10}
+thead th:last-child{border-right:none}
+thead th.sell-hd{color:var(--gn)}
+tbody td{padding:6px 2px;border-bottom:1px solid rgba(45,51,72,.5);border-right:1px solid rgba(45,51,72,.3);vertical-align:middle;white-space:nowrap;text-align:center}
+tbody td:last-child{border-right:none}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:rgba(79,140,255,.05)}
+tbody tr:last-child td{border-bottom:none}
+.sn{font-weight:700;color:var(--tx);font-size:16px}
+.scode{font-size:12px;color:var(--ts);margin-left:4px}
+.dc{color:var(--ts);font-size:15px}
+.buy-v{font-weight:600;color:var(--tx);font-size:15px}
+.avg-v{font-weight:700;color:var(--pp);font-size:15px}
+.add-v{font-weight:600;color:var(--pp);font-size:15px}
+.cur-v{font-weight:700;color:var(--gl);font-size:15px}
+.pft-v{font-weight:700;color:var(--gn);font-size:15px}
+.rb{display:inline-flex;align-items:center;padding:6px 12px;border-radius:6px;font-size:16px;font-weight:800;min-width:85px;justify-content:center;background:transparent}
+.rb.pos{color:var(--rd)}.rb.neg{color:var(--ac)}.rb.neu{color:var(--ts)}
+.m-ret{display:none}
+.wt{display:inline-block;background:rgba(79,140,255,.12);color:var(--ac);padding:4px 10px;border-radius:4px;font-size:14px;font-weight:600}
+.nt{font-size:13px;max-width:none;white-space:normal;line-height:1.4;text-align:left}
+.mh td{background:var(--sf2);padding:14px 12px;font-weight:700;font-size:16px;color:var(--ac);border-bottom:1px solid var(--bd);text-align:left}
+.ft{text-align:center;padding:32px 0;color:var(--ts);font-size:13px;margin-top:32px}
+.no-data{text-align:center;padding:40px;color:var(--ts);font-size:14px}
+.loading{text-align:center;padding:50px;color:var(--ts)}
+.loading-spin{display:inline-block;width:24px;height:24px;border:3px solid var(--sf2);border-top-color:var(--rd);border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:768px){
+.ct{padding:16px 10px 60px}
+.hd h1{font-size:28px}
+.tsc{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{table-layout:auto;min-width:1200px}
+thead th{padding:4px 6px;font-size:12px;text-align:center;white-space:nowrap}
+tbody td{padding:4px 6px;font-size:12px;text-align:center;white-space:nowrap;line-height:1.3;vertical-align:middle;border-bottom:1px solid rgba(45,51,72,.3)}
+td:nth-child(2) br{display:none}
+.mh td{font-size:13px;padding:6px 10px;white-space:normal}
+.sn{font-size:13px}
+.scode{font-size:10px}
+.m-ret{display:inline-block;margin:0 0 0 4px;font-size:10px;font-weight:800;padding:0 5px;border-radius:3px;line-height:1.5;vertical-align:middle}
+.m-ret.pos{color:var(--rd);background:var(--rdd)}
+.m-ret.neg{color:var(--ac);background:rgba(79,140,255,.12)}
+.m-ret.neu{color:var(--ts);background:var(--sf2)}
+.rb{font-size:12px;min-width:50px;padding:2px 4px}
+.wt{padding:2px 8px;font-size:12px}
+.nt{max-width:none;font-size:11px;white-space:nowrap}
+}
+</style>
+</head>
+<body>
+<div class="ct">
+<div class="hd" style="border-bottom:none;padding-bottom:0;margin-bottom:0">
+<div class="hb">🏆 VIP PORTFOLIO</div>
+<h1>🎖️ 성기배소장 전략 | 단기스윙 시그널</h1>
+</div>
+<div style="background:linear-gradient(135deg, #1a1230 0%, #0f1117 40%, #131a10 100%);border:1px solid rgba(255,200,69,0.3);border-radius:20px;padding:40px 36px;margin:24px 0 32px;text-align:center;position:relative;overflow:hidden">
+<div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rd),var(--gl),var(--gn))"></div>
+<div style="font-size:36px;font-weight:900;color:var(--tx);margin-bottom:6px;letter-spacing:-1px;text-shadow:0 0 40px rgba(255,200,69,0.15)">신규 추천 종목</div>
+<div style="width:60px;height:3px;background:linear-gradient(90deg,var(--rd),var(--gl));margin:16px auto 20px;border-radius:2px"></div>
+<div style="font-size:19px;color:var(--rd);font-weight:800;line-height:2.2">매수는 반드시 분할 매수 전략사용</div>
+<div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,200,69,0.15)">
+<span style="font-size:24px;color:var(--gl);font-weight:900;letter-spacing:1px;text-shadow:0 0 30px rgba(255,200,69,0.2)">" 대박수익은 인내에서 나온다 "</span>
+</div>
+</div>
+<div class="lg">
+<div class="lg-i"><div class="lg-d" style="background:var(--tx)"></div><span style="color:var(--ts)">매수가</span></div>
+<div class="lg-i"><div class="lg-d" style="background:var(--gl)"></div><span style="color:var(--ts)">현재가</span></div>
+<div class="lg-i"><div class="lg-d" style="background:var(--rd)"></div><span style="color:var(--ts)">수익률</span></div>
+<div class="lg-i"><div class="lg-d" style="background:var(--gn)"></div><span style="color:var(--ts)">매도가</span></div>
+</div>
+<div class="fb" id="ctrlBar">
+<div id="filterBtns"></div>
+<div class="sep"></div>
+<button class="sort-btn" id="sortDate" onclick="toggleSort('date')">추천일 ▼</button>
+<button class="sort-btn" id="sortReturn" onclick="toggleSort('return')">수익률 ▼</button>
+</div>
+<div class="tw"><div class="tsc">
+<table>
+<thead><tr>
+<th>추천일</th>
+<th style="text-align:left;padding-left:10px">종목명</th>
+<th>수익률</th>
+<th>최고수익</th>
+<th>현재가</th>
+<th>매수가</th>
+<th>평균단가</th>
+<th>추가매수</th>
+<th class="sell-hd">1차매도</th>
+<th class="sell-hd">2차매도</th>
+<th class="sell-hd">3차매도</th>
+<th>비중</th>
+<th>비고</th>
+</tr></thead>
+<tbody id="tb">
+<tr><td colspan="13" class="loading"><div class="loading-spin"></div><br>데이터를 불러오는 중...</td></tr>
+</tbody>
+</table>
+</div></div>
+<div class="ft">
+<div>🎖️ 성기배소장 전략 | 단기스윙 시그널</div>
+<div style="margin-top:4px">수익률 = (현재가 − 평균단가) ÷ 평균단가 | 최고수익 = (추천일 이후 최고가 − 평균단가) ÷ 평균단가</div>
+</div>
+</div>
+<script>
+var JSON_URL='./prices.json';
+var DATA=null;
+var currentFilter='all';
+var currentSort='date';
+var sortAsc=false;
+
+async function loadData(){
+  try{
+    var r=await fetch(JSON_URL+'?t='+Date.now());
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    DATA=await r.json();
+    renderAll();
+  }catch(e){
+    console.error(e);
+    document.getElementById('tb').innerHTML='<tr><td colspan="13" class="no-data">데이터를 불러올 수 없습니다.</td></tr>';
+  }
+}
+
+function renderAll(){
+  if(!DATA)return;
+  buildFilters();renderTable();
+}
+
+function getItems(){
+  if(!DATA)return[];
+  return DATA.holdings.filter(function(h){return h.is_active;});
+}
+
+function getFilteredItems(){
+  var items=getItems();
+  if(currentFilter!=='all'){items=items.filter(function(h){return h.rec_date.startsWith(currentFilter);});}
+  return items;
+}
+
+function buildFilters(){
+  var items=getItems();var months={};
+  items.forEach(function(h){if(h.rec_date){var m=h.rec_date.substring(0,7);months[m]=(months[m]||0)+1;}});
+  var sorted=Object.keys(months).sort().reverse();
+  var total=items.length;
+  var html='<button class="fbtn '+(currentFilter==='all'?'active':'')+'" onclick="setFilter(\'all\')">전체 ('+total+'종목)</button>';
+  sorted.forEach(function(m){
+    var parts=m.split('-');
+    var label=parseInt(parts[1])+'월 ('+months[m]+'종목)';
+    html+='<button class="fbtn '+(currentFilter===m?'active':'')+'" onclick="setFilter(\''+m+'\')">'+label+'</button>';
+  });
+  document.getElementById('filterBtns').innerHTML=html;
+}
+
+function setFilter(f){currentFilter=f;buildFilters();renderTable();}
+
+function toggleSort(type){
+  if(currentSort===type){sortAsc=!sortAsc;}else{currentSort=type;sortAsc=false;}
+  document.getElementById('sortDate').className='sort-btn'+(currentSort==='date'?' on':'');
+  document.getElementById('sortReturn').className='sort-btn'+(currentSort==='return'?' on':'');
+  document.getElementById('sortDate').textContent='추천일'+(currentSort==='date'?(sortAsc?' ▲':' ▼'):'');
+  document.getElementById('sortReturn').textContent='수익률'+(currentSort==='return'?(sortAsc?' ▲':' ▼'):'');
+  renderTable();
+}
+
+function sortItems(items){
+  var sorted=items.slice();
+  if(currentSort==='date'){
+    sorted.sort(function(a,b){return sortAsc?(a.rec_date>b.rec_date?1:-1):(a.rec_date<b.rec_date?1:-1);});
+  }else{
+    sorted.sort(function(a,b){
+      var aa=a.avg_price||a.buy_price||0,ca=a.cur_price||0;
+      var ab=b.avg_price||b.buy_price||0,cb=b.cur_price||0;
+      var ra=(aa>0&&ca>0)?(ca-aa)/aa:-9999;
+      var rb=(ab>0&&cb>0)?(cb-ab)/ab:-9999;
+      return sortAsc?ra-rb:rb-ra;
+    });
+  }
+  return sorted;
+}
+
+function getMonthStats(items,month){
+  var mi=items.filter(function(h){return h.rec_date&&h.rec_date.startsWith(month);});
+  var cnt=0,pf=0,top=[];
+  mi.forEach(function(h){
+    var avg=h.avg_price||h.buy_price||0,cur=h.cur_price||0;
+    if(avg>0&&cur>0){var r=Math.round((cur-avg)/avg*10000)/100;cnt++;if(r>0)pf++;top.push({name:h.name,ret:r});}
+  });
+  top.sort(function(a,b){return b.ret-a.ret;});
+  var top3=top.slice(0,3);
+  var wr=cnt>0?(pf/cnt*100).toFixed(0):0;
+  var best=top3.length>0?'+'+top3[0].ret.toFixed(1)+'%':'-';
+  var names=top3.map(function(t){return t.name+'('+(t.ret>=0?'+':'')+t.ret.toFixed(1)+'%)';}).join(' \u00b7 ');
+  return{count:mi.length,winRate:wr,best:best,topNames:names};
+}
+
+function renderTable(){
+  var items=getFilteredItems();items=sortItems(items);
+  if(items.length===0){document.getElementById('tb').innerHTML='<tr><td colspan="13" class="no-data">해당 조건의 종목이 없습니다.</td></tr>';return;}
+  var html='',lastMonth='',allItems=getItems();
+  items.forEach(function(h){
+    if(currentSort==='date'&&h.rec_date){
+      var m=h.rec_date.substring(0,7);
+      if(m!==lastMonth&&currentFilter==='all'){
+        lastMonth=m;var parts=m.split('-');
+        var mLabel='\ud83d\udcc5 '+parts[0]+'\ub144 '+parseInt(parts[1])+'\uc6d4';
+        var ms=getMonthStats(allItems,m);
+        html+='<tr class="mh"><td colspan="13">'+mLabel+' <span style="font-size:13px;color:var(--ts);font-weight:400;margin-left:10px">'+ms.count+'\uc885\ubaa9 \u00b7 \uc2b9\ub960 '+ms.winRate+'% \u00b7 \ucd5c\uace0 '+ms.best+'</span><br><span style="font-size:13px;color:var(--gn);font-weight:600">'+ms.topNames+'</span></td></tr>';
+      }
+    }
+    var avg=h.avg_price||h.buy_price||0;
+    var buy=h.buy_price||0;
+    var add=h.add_buy||0;
+    var cur=h.cur_price||0;
+    var dayH='';
+    if(h.rec_date&&h.rec_date.length>=10){dayH='<span class="dc">'+h.rec_date.substring(5)+'</span>';}
+    var r=null,retH='<span class="rb neu">-</span>',mRetH='<span class="m-ret neu">-</span>';
+    if(avg>0&&cur>0){
+      r=Math.round((cur-avg)/avg*10000)/100;
+      var cl=r>=0?'pos':'neg';var sg=r>=0?'+':'';
+      retH='<span class="rb '+cl+'">'+sg+r.toFixed(2)+'%</span>';
+      mRetH='<span class="m-ret '+cl+'">'+sg+r.toFixed(2)+'%</span>';
+    }
+    var pkRetH='<span class="rb neu">-</span>';
+    if(h.peak_return_pct!=null){
+      var pkCl=h.peak_return_pct>=0?'pos':'neg';var pkSg=h.peak_return_pct>=0?'+':'';
+      pkRetH='<span class="rb '+pkCl+'">'+pkSg+h.peak_return_pct.toFixed(2)+'%</span>';
+    }
+    var curH=cur>0?'<span class="cur-v">'+cur.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
+    var buyH=buy>0?'<span class="buy-v">'+buy.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
+    var avgH=avg>0?'<span class="avg-v">'+avg.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
+    var addH=add>0?'<span class="add-v">'+add.toLocaleString()+'</span>':'<span style="color:var(--ts)">-</span>';
+    var s1H=h.sell1?'<span class="pft-v">'+h.sell1+'</span>':'<span style="color:var(--ts)">-</span>';
+    var s2H=h.sell2?'<span class="pft-v">'+h.sell2+'</span>':'<span style="color:var(--ts)">-</span>';
+    var s3H=h.sell3?'<span class="pft-v">'+h.sell3+'</span>':'<span style="color:var(--ts)">-</span>';
+    var wtH=h.weight?'<span class="wt">'+h.weight+'</span>':'-';
+    var noteH='';
+    if(h.note){
+      if(h.note.indexOf('\uc190\uc808')>=0){noteH='<span class="nt" style="color:var(--ac);font-weight:900">'+h.note+'</span>';}
+      else{noteH='<span class="nt" style="color:var(--rd);font-weight:900">'+h.note+'</span>';}
+    }else{noteH='<span style="color:var(--ts)">-</span>';}
+    var nameCell='<span class="sn">'+h.name+'</span><span class="scode">'+h.code+'</span><br>'+mRetH;
+    html+='<tr><td>'+dayH+'</td><td style="text-align:left;padding-left:10px">'+nameCell+'</td><td>'+retH+'</td><td>'+pkRetH+'</td><td>'+curH+'</td><td>'+buyH+'</td><td>'+avgH+'</td><td>'+addH+'</td><td>'+s1H+'</td><td>'+s2H+'</td><td>'+s3H+'</td><td>'+wtH+'</td><td>'+noteH+'</td></tr>';
+  });
+  document.getElementById('tb').innerHTML=html;
+}
+
+loadData();
+</script>
+</body>
+</html>
