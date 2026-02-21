@@ -78,25 +78,49 @@ tbody tr:last-child td{border-bottom:none}
 .loading-spin{display:inline-block;width:24px;height:24px;border:3px solid var(--sf2);border-top-color:var(--rd);border-radius:50%;animation:spin .6s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:768px){
+/* 레이아웃 */
 .ct{padding:16px 10px 60px}
 .hd h1{font-size:28px}
 .sm{grid-template-columns:repeat(2,1fr);gap:8px}
 .sc .vl{font-size:22px}
+.tab{padding:8px 14px;font-size:14px}
+
+/* 테이블 기본 */
 table{table-layout:auto}
-thead th{padding:4px 2px;font-size:11px;text-align:center}
-tbody tr{height:0}
-tbody td{padding:1px 2px;font-size:12px;text-align:center;line-height:1.15;vertical-align:middle}
+thead th{padding:3px 2px;font-size:11px;text-align:center;line-height:1.2}
 th:nth-child(3),td:nth-child(3){display:none}
-.m-ret{display:inline-block;margin-top:0;font-size:11px;font-weight:800;padding:1px 6px;border-radius:3px}
+
+/* ★ 핵심: 행 높이 강제 고정 */
+tbody tr{height:36px}
+tbody td{
+  padding:0 2px;
+  font-size:12px;
+  text-align:center;
+  line-height:1;
+  vertical-align:middle;
+  border-bottom:1px solid rgba(45,51,72,.25);
+  overflow:hidden
+}
+
+/* 월구분 헤더 */
+.mh td{font-size:13px;padding:3px 8px;height:auto}
+
+/* 종목명 영역 */
+.sn{font-size:13px;line-height:1.2;display:inline}
+.scode{font-size:10px}
+
+/* 수익률 뱃지 */
+.m-ret{display:inline-block;margin:0;font-size:10px;font-weight:800;padding:0 5px;border-radius:3px;line-height:1.4}
 .m-ret.pos{color:var(--rd);background:var(--rdd)}
 .m-ret.neg{color:var(--ac);background:rgba(79,140,255,.12)}
 .m-ret.neu{color:var(--ts);background:var(--sf2)}
-.rb{font-size:11px;min-width:50px;padding:1px 4px}
-.sn{font-size:13px}
-.nt{max-width:none;font-size:11px}
-.tab{padding:8px 14px;font-size:14px}
-.mh td{font-size:13px;padding:4px 8px}
-tbody td{border-bottom:1px solid rgba(45,51,72,.2)}
+
+/* 수익률/비중/비고 */
+.rb{font-size:11px;min-width:auto;padding:0 3px}
+.wt{padding:2px 6px;font-size:11px}
+.nt{max-width:none;font-size:10px;line-height:1.2}
+
+/* 모바일 컬럼 너비 */
 th:nth-child(1),td:nth-child(1){width:auto}
 th:nth-child(2),td:nth-child(2){width:auto}
 th:nth-child(4),td:nth-child(4){width:auto}
