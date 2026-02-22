@@ -105,9 +105,46 @@ td:nth-child(2) br{display:none}
 .wt{padding:2px 8px;font-size:12px}
 .nt{max-width:none;font-size:11px;white-space:nowrap}
 }
+
+/* ── 비밀번호 오버레이 ── */
+#authOverlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,17,23,0.97);z-index:9999;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(20px);transition:opacity .4s}
+#authOverlay.fade-out{opacity:0;pointer-events:none}
+.auth-box{background:linear-gradient(135deg,#1a1d27 0%,#232735 100%);border:1px solid rgba(255,200,69,0.3);border-radius:24px;padding:48px 40px;text-align:center;max-width:400px;width:90%;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.auth-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rd),var(--gl),var(--gn))}
+.auth-lock{font-size:48px;margin-bottom:16px}
+.auth-title{font-size:24px;font-weight:900;color:var(--tx);margin-bottom:6px}
+.auth-sub{font-size:14px;color:var(--ts);margin-bottom:28px}
+.auth-input{width:100%;padding:16px 20px;background:var(--bg);border:2px solid var(--bd);border-radius:12px;color:var(--tx);font-size:24px;font-family:inherit;text-align:center;letter-spacing:12px;font-weight:700;outline:none;transition:border-color .2s}
+.auth-input:focus{border-color:var(--gl)}
+.auth-input::placeholder{letter-spacing:4px;font-size:16px;font-weight:400;color:var(--ts)}
+.auth-btn{width:100%;margin-top:16px;padding:14px;background:linear-gradient(135deg,var(--gl),#e6b030);border:none;border-radius:12px;color:#0f1117;font-size:16px;font-weight:800;font-family:inherit;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.auth-btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(255,200,69,0.3)}
+.auth-btn:active{transform:translateY(0)}
+.auth-error{color:var(--rd);font-size:13px;margin-top:12px;display:none;font-weight:600}
+.auth-hint{color:var(--ts);font-size:12px;margin-top:20px;padding-top:16px;border-top:1px solid var(--bd)}
+@keyframes authShake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.auth-box.shake{animation:authShake .4s ease}
+@media(max-width:768px){.auth-box{padding:36px 24px;margin:0 16px}.auth-title{font-size:20px}.auth-input{font-size:20px;letter-spacing:8px;padding:14px 16px}}
+
 </style>
 </head>
 <body>
+
+<!-- 비밀번호 오버레이 -->
+<div id="authOverlay">
+<div class="auth-box" id="authBox">
+<div class="auth-lock">&#x1F512;</div>
+<div class="auth-title">VIP 전용 콘텐츠</div>
+<div class="auth-sub">접근 비밀번호를 입력해 주세요</div>
+<input type="password" id="pwInput" class="auth-input" placeholder="PIN" maxlength="10"
+  onkeydown="if(event.key==='Enter')checkPassword()" inputmode="numeric" autocomplete="off">
+<button class="auth-btn" onclick="checkPassword()">확 인</button>
+<div class="auth-error" id="pwError">비밀번호가 일치하지 않습니다</div>
+<div class="auth-hint">비밀번호는 매일 변경됩니다</div>
+</div>
+</div>
+
+
 <div class="ct">
 <div class="hd" style="border-bottom:none;padding-bottom:0;margin-bottom:0">
 <div class="hb">🏆 VIP PORTFOLIO</div>
@@ -177,6 +214,68 @@ td:nth-child(2) br{display:none}
 </div>
 </div>
 <script>
+
+// ── 비밀번호 인증 시스템 ──
+async function sha256(str){
+  var buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
+}
+
+async function initAuth(){
+  try{
+    var r=await fetch(JSON_URL+'?t='+Date.now());
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    DATA=await r.json();
+
+    var pwHash=DATA.pw_hash;
+    if(!pwHash){
+      // 해시 없으면 비밀번호 없이 진입
+      document.getElementById('authOverlay').style.display='none';
+      renderAll();
+      return;
+    }
+
+    // 세션 체크 (해시값+날짜로 당일만 유효)
+    var today=new Date().toISOString().slice(0,10);
+    var stored=sessionStorage.getItem('vip_auth');
+    if(stored===pwHash+'_'+today){
+      document.getElementById('authOverlay').style.display='none';
+      renderAll();
+      return;
+    }
+
+    // 비밀번호 입력 대기
+    document.getElementById('authOverlay').style.display='flex';
+    setTimeout(function(){document.getElementById('pwInput').focus();},300);
+  }catch(e){
+    console.error(e);
+    document.getElementById('authOverlay').innerHTML='<div class="auth-box"><div style="color:var(--rd);font-size:16px;font-weight:700">데이터를 불러올 수 없습니다</div></div>';
+  }
+}
+
+async function checkPassword(){
+  var input=document.getElementById('pwInput').value.trim();
+  if(!input)return;
+  var h=await sha256(input);
+  if(h===DATA.pw_hash){
+    var today=new Date().toISOString().slice(0,10);
+    sessionStorage.setItem('vip_auth',DATA.pw_hash+'_'+today);
+    document.getElementById('authOverlay').classList.add('fade-out');
+    setTimeout(function(){
+      document.getElementById('authOverlay').style.display='none';
+      renderAll();
+    },400);
+  }else{
+    var box=document.getElementById('authBox');
+    box.classList.remove('shake');
+    void box.offsetWidth;
+    box.classList.add('shake');
+    document.getElementById('pwError').style.display='block';
+    document.getElementById('pwInput').value='';
+    document.getElementById('pwInput').focus();
+  }
+}
+
 var JSON_URL='./prices.json';
 var DATA=null;
 var currentTab='active';
@@ -354,7 +453,7 @@ function renderTable(){
   document.getElementById('tb').innerHTML=html;
 }
 
-loadData();
+initAuth();
 </script>
 </body>
 </html>
