@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-22 03:16:13",
-  "total_count": 7,
-  "active_count": 7,
+  "updated_at": "2026-02-22 13:58:58",
+  "total_count": 10,
+  "active_count": 10,
   "holdings": [
     {
       "code": "047310",
@@ -112,7 +112,55 @@
       "sell2": "",
       "sell3": "",
       "weight": "5~10%",
-      "note": "단기 3~4일 / 조정시 2회 추가매수",
+      "note": "단기 3~4일 / 조정시 2회 추가매수예정",
+      "is_active": true
+    },
+    {
+      "code": "294570",
+      "name": "쿠콘",
+      "rec_date": "2026-01-27",
+      "buy_price": 34550,
+      "add_buy": 0,
+      "avg_price": 34550,
+      "cur_price": 0,
+      "return_pct": null,
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
+      "weight": "3%",
+      "note": "3.3.4 분할매수 ~33500원 / 30500원 부근 배수매수예:정",
+      "is_active": true
+    },
+    {
+      "code": "0009K0",
+      "name": "에임드바이오",
+      "rec_date": "2026-01-26",
+      "buy_price": 55650,
+      "add_buy": 0,
+      "avg_price": 55650,
+      "cur_price": 0,
+      "return_pct": null,
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
+      "weight": "5~10%",
+      "note": "56000원 부근 50% 비중축소",
+      "is_active": true
+    },
+    {
+      "code": "095500",
+      "name": "미래나노텍",
+      "rec_date": "2026-01-26",
+      "buy_price": 12320,
+      "add_buy": 0,
+      "avg_price": 12320,
+      "cur_price": 0,
+      "return_pct": null,
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
+      "weight": "5~10%",
+      "note": "조정시 1회 추가 분할매수예정",
       "is_active": true
     }
   ]
