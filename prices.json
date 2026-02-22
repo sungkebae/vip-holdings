@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-22 17:35:58",
+  "updated_at": "2026-02-22 17:42:28",
   "total_count": 61,
   "active_count": 53,
   "holdings": [
@@ -51,10 +51,10 @@
       "peak_price": 34150,
       "peak_return_pct": 42.89,
       "sell1": "",
-      "sell2": "",
+      "sell2": "33460(+40%)",
       "sell3": "",
       "weight": "5~10%",
-      "note": "50% 이익실현 50% 보유",
+      "note": "50% 이익실현 30% 보유",
       "is_active": true
     },
     {
@@ -105,7 +105,7 @@
       "peak_price": 19620,
       "peak_return_pct": 34.11,
       "sell1": "",
-      "sell2": "",
+      "sell2": "17995(+23%)",
       "sell3": "",
       "weight": "5~10%",
       "note": "50% 이익실현 추가이익실현 30% 보유",
