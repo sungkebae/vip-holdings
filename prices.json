@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-22 17:43:28",
-  "total_count": 61,
-  "active_count": 53,
+  "updated_at": "2026-02-22 17:44:56",
+  "total_count": 60,
+  "active_count": 52,
   "holdings": [
     {
       "code": "267320",
@@ -74,24 +74,6 @@
       "weight": "5~10%",
       "note": "전량이익실현",
       "is_active": false
-    },
-    {
-      "code": "267320",
-      "name": "나인테크",
-      "rec_date": "2026-02-11",
-      "buy_price": 3690,
-      "add_buy": 0,
-      "avg_price": 3690,
-      "cur_price": 3780,
-      "return_pct": 2.44,
-      "peak_price": 4315,
-      "peak_return_pct": 16.94,
-      "sell1": "",
-      "sell2": "",
-      "sell3": "",
-      "weight": "5~10%",
-      "note": "종가매수 / 30%보유",
-      "is_active": true
     },
     {
       "code": "024060",
