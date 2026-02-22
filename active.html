@@ -222,7 +222,7 @@ async function genPin(){
   try{if(sessionStorage.getItem('_vip_auth')==='1'){
     document.getElementById('lockScreen').style.display='none';
     document.getElementById('mainContent').style.display='block';
-    loadData(); return;
+    setTimeout(function(){loadData();},100); return;
   }}catch(e){}
 
   var boxes = [document.getElementById('p0'),document.getElementById('p1'),document.getElementById('p2'),document.getElementById('p3')];
@@ -427,6 +427,16 @@ function renderTable(){
   });
   document.getElementById('tb').innerHTML=html;
 }
+
+// ===== F5 새로고침 안전장치 =====
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    if(!DATA && document.getElementById('mainContent').style.display==='block'){
+      console.log('[재시도] 데이터 로드 재시도');
+      loadData();
+    }
+  }, 500);
+});
 </script>
 </body>
 </html>
