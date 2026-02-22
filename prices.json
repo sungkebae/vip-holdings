@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-22 03:16:14",
-  "total_count": 65,
-  "active_count": 57,
+  "updated_at": "2026-02-22 13:58:59",
+  "total_count": 61,
+  "active_count": 53,
   "holdings": [
     {
       "code": "100840",
@@ -274,24 +274,6 @@
       "is_active": true
     },
     {
-      "code": "079370",
-      "name": "제우스",
-      "rec_date": "2026-01-29",
-      "buy_price": 19500,
-      "add_buy": 0,
-      "avg_price": 19500,
-      "cur_price": 17500,
-      "return_pct": -10.26,
-      "peak_price": 20350,
-      "peak_return_pct": 4.36,
-      "sell1": "",
-      "sell2": "",
-      "sell3": "",
-      "weight": "5~10%",
-      "note": "단기 3~4일 / 조정시 2회 추가매수",
-      "is_active": true
-    },
-    {
       "code": "464490",
       "name": "쿼드메디슨",
       "rec_date": "2026-01-28",
@@ -325,24 +307,6 @@
       "sell3": "",
       "weight": "5~10%",
       "note": "익절후 30%보유",
-      "is_active": true
-    },
-    {
-      "code": "294570",
-      "name": "쿠콘",
-      "rec_date": "2026-01-27",
-      "buy_price": 34550,
-      "add_buy": 0,
-      "avg_price": 34550,
-      "cur_price": 34150,
-      "return_pct": -1.16,
-      "peak_price": 38400,
-      "peak_return_pct": 11.14,
-      "sell1": "",
-      "sell2": "",
-      "sell3": "",
-      "weight": "3%",
-      "note": "3.3.4 분할매수 ~33500원 / 30500원 부근 배수매수",
       "is_active": true
     },
     {
@@ -397,42 +361,6 @@
       "sell3": "",
       "weight": "5~10%",
       "note": "익절후 30%보유",
-      "is_active": true
-    },
-    {
-      "code": "095500",
-      "name": "미래나노텍",
-      "rec_date": "2026-01-26",
-      "buy_price": 12320,
-      "add_buy": 0,
-      "avg_price": 12320,
-      "cur_price": 11320,
-      "return_pct": -8.12,
-      "peak_price": 12750,
-      "peak_return_pct": 3.49,
-      "sell1": "",
-      "sell2": "",
-      "sell3": "",
-      "weight": "5~10%",
-      "note": "조정시 1회 추가 분할매수",
-      "is_active": true
-    },
-    {
-      "code": "0009K0",
-      "name": "에임드바이오",
-      "rec_date": "2026-01-26",
-      "buy_price": 55650,
-      "add_buy": 0,
-      "avg_price": 55650,
-      "cur_price": 51000,
-      "return_pct": -8.36,
-      "peak_price": 59500,
-      "peak_return_pct": 6.92,
-      "sell1": "",
-      "sell2": "",
-      "sell3": "",
-      "weight": "5~10%",
-      "note": "56000원 부근 50% 비중축소",
       "is_active": true
     },
     {
