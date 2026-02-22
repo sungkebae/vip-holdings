@@ -9,6 +9,27 @@
 :root{--bg:#0f1117;--sf:#1a1d27;--sf2:#232735;--bd:#2d3348;--tx:#e8eaed;--ts:#8b91a8;--ac:#4f8cff;--gn:#00d68f;--gd:rgba(0,214,143,.12);--rd:#ff4d6a;--rdd:rgba(255,77,106,.12);--gl:#ffc845;--gld:rgba(255,200,69,.12);--pp:#a78bfa;--ppd:rgba(167,139,250,.12)}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+
+/* ===== 패스워드 잠금 화면 ===== */
+#lockScreen{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center}
+.lock-box{text-align:center;padding:40px;max-width:400px;width:90%}
+.lock-icon{font-size:64px;margin-bottom:20px;filter:drop-shadow(0 0 30px rgba(255,200,69,0.3))}
+.lock-title{font-size:28px;font-weight:900;color:var(--gl);margin-bottom:8px}
+.lock-sub{font-size:15px;color:var(--ts);margin-bottom:32px}
+.pin-wrap{display:flex;gap:12px;justify-content:center;margin-bottom:24px}
+.pin-box{width:56px;height:64px;background:var(--sf);border:2px solid var(--bd);border-radius:12px;font-size:28px;font-weight:900;color:var(--gl);text-align:center;line-height:60px;font-family:inherit;outline:none;transition:all .2s;caret-color:transparent}
+.pin-box:focus{border-color:var(--gl);box-shadow:0 0 20px rgba(255,200,69,0.15)}
+.pin-box.filled{border-color:var(--gl);background:rgba(255,200,69,0.08)}
+.pin-box.error{border-color:var(--rd);animation:shake .4s ease-in-out}
+.lock-msg{font-size:14px;color:var(--rd);min-height:20px;margin-bottom:16px;font-weight:600}
+.lock-footer{font-size:13px;color:var(--ts);margin-top:24px;line-height:1.8}
+.lock-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,77,106,0.12);color:var(--rd);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:20px}
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+@keyframes fadeOut{from{opacity:1}to{opacity:0;pointer-events:none}}
+.lock-fade{animation:fadeOut .4s ease forwards}
+
+/* ===== 메인 콘텐츠 ===== */
+#mainContent{display:none}
 .ct{max-width:1600px;margin:0 auto;padding:32px 20px 80px}
 .hd{text-align:center;margin-bottom:32px;padding:40px 0 32px}
 .hb{display:inline-flex;align-items:center;gap:6px;background:var(--gld);color:var(--gl);padding:8px 18px;border-radius:20px;font-size:14px;font-weight:600;margin-bottom:16px}
@@ -85,14 +106,38 @@ td:nth-child(2) br{display:none}
 .rb{font-size:12px;min-width:50px;padding:2px 4px}
 .wt{padding:2px 8px;font-size:12px}
 .nt{max-width:none;font-size:11px;white-space:nowrap}
+.lock-box{padding:24px}
+.lock-title{font-size:22px}
+.pin-box{width:48px;height:56px;font-size:24px;line-height:52px}
 }
 </style>
 </head>
 <body>
+
+<!-- ===== 패스워드 잠금 화면 ===== -->
+<div id="lockScreen">
+<div class="lock-box">
+<div class="lock-icon">&#x1F512;</div>
+<div class="lock-badge">VIP MEMBERS ONLY</div>
+<div class="lock-title">비밀번호를 입력하세요</div>
+<div class="lock-sub">VIP 전용 페이지입니다</div>
+<div class="pin-wrap">
+<input type="tel" maxlength="1" class="pin-box" id="p0" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+<input type="tel" maxlength="1" class="pin-box" id="p1" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+<input type="tel" maxlength="1" class="pin-box" id="p2" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+<input type="tel" maxlength="1" class="pin-box" id="p3" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+</div>
+<div class="lock-msg" id="lockMsg"></div>
+<div class="lock-footer">매일 오전 8시 새로운 비밀번호가 발급됩니다<br>VIP 채널에서 확인해 주세요</div>
+</div>
+</div>
+
+<!-- ===== 메인 콘텐츠 ===== -->
+<div id="mainContent">
 <div class="ct">
 <div class="hd" style="border-bottom:none;padding-bottom:0;margin-bottom:0">
-<div class="hb">🏆 VIP PORTFOLIO</div>
-<h1>🎖️ 성기배소장 전략 | 단기스윙 시그널</h1>
+<div class="hb">&#x1F3C6; VIP PORTFOLIO</div>
+<h1>&#x1F396;&#xFE0F; 성기배소장 전략 | 단기스윙 시그널</h1>
 </div>
 <div style="background:linear-gradient(135deg, #1a1230 0%, #0f1117 40%, #131a10 100%);border:1px solid rgba(255,200,69,0.3);border-radius:20px;padding:40px 36px;margin:24px 0 32px;text-align:center;position:relative;overflow:hidden">
 <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rd),var(--gl),var(--gn))"></div>
@@ -112,8 +157,8 @@ td:nth-child(2) br{display:none}
 <div class="fb" id="ctrlBar">
 <div id="filterBtns"></div>
 <div class="sep"></div>
-<button class="sort-btn" id="sortDate" onclick="toggleSort('date')">추천일 ▼</button>
-<button class="sort-btn" id="sortReturn" onclick="toggleSort('return')">수익률 ▼</button>
+<button class="sort-btn" id="sortDate" onclick="toggleSort('date')">추천일 &#x25BC;</button>
+<button class="sort-btn" id="sortReturn" onclick="toggleSort('return')">수익률 &#x25BC;</button>
 </div>
 <div class="tw"><div class="tsc">
 <table>
@@ -137,11 +182,115 @@ td:nth-child(2) br{display:none}
 </table>
 </div></div>
 <div class="ft">
-<div>🎖️ 성기배소장 전략 | 단기스윙 시그널</div>
+<div>&#x1F396;&#xFE0F; 성기배소장 전략 | 단기스윙 시그널</div>
 <div style="margin-top:4px">수익률 = (현재가 − 평균단가) ÷ 평균단가</div>
 </div>
 </div>
+</div>
+
 <script>
+// ===== 패스워드 검증 시스템 =====
+// password_viewer.py 와 동일한 알고리즘 (SEED + 날짜 → SHA256 → 4자리)
+// 8시 기준: 8시 이전 = 전날 비번, 8시 이후 = 오늘 비번
+
+var _VK = [83,71,66,97,101,95,86,73,80,95,50,48,50,54,95,83,116,111,99,107,83,105,103,110,97,108];
+
+function _gs(){return _VK.map(function(c){return String.fromCharCode(c);}).join('');}
+
+async function _sha(msg){
+  var buf = new TextEncoder().encode(msg);
+  var hash = await crypto.subtle.digest('SHA-256', buf);
+  var arr = Array.from(new Uint8Array(hash));
+  return arr.map(function(b){return b.toString(16).padStart(2,'0');}).join('');
+}
+
+async function genPin(){
+  var now = new Date();
+  var d = now;
+  if(now.getHours() < 8){
+    d = new Date(now.getTime() - 86400000);
+  }
+  var ds = d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  var raw = ds + _gs();
+  var h = await _sha(raw);
+  var num = parseInt(h.substring(0,8), 16) % 10000;
+  return String(num).padStart(4, '0');
+}
+
+(function(){
+  // 세션 인증 체크
+  try{if(sessionStorage.getItem('_vip_auth')==='1'){
+    document.getElementById('lockScreen').style.display='none';
+    document.getElementById('mainContent').style.display='block';
+    loadData(); return;
+  }}catch(e){}
+
+  var boxes = [document.getElementById('p0'),document.getElementById('p1'),document.getElementById('p2'),document.getElementById('p3')];
+  var attempts = 0;
+
+  boxes[0].focus();
+
+  boxes.forEach(function(box, i){
+    box.addEventListener('input', function(){
+      if(this.value.length > 0){
+        this.value = this.value.replace(/[^0-9]/g,'').slice(-1);
+        this.classList.add('filled');
+        if(i < 3) boxes[i+1].focus();
+        if(i === 3) checkPin();
+      }
+    });
+    box.addEventListener('keydown', function(e){
+      if(e.key === 'Backspace'){
+        if(this.value === '' && i > 0){
+          boxes[i-1].value = '';
+          boxes[i-1].classList.remove('filled');
+          boxes[i-1].focus();
+        } else {
+          this.value = '';
+          this.classList.remove('filled');
+        }
+      }
+    });
+    // 모바일 터치 시 포커스
+    box.addEventListener('click', function(){ this.select(); });
+  });
+
+  async function checkPin(){
+    var entered = boxes.map(function(b){return b.value;}).join('');
+    if(entered.length < 4) return;
+
+    var correct = await genPin();
+    if(entered === correct){
+      try{sessionStorage.setItem('_vip_auth','1');}catch(e){}
+      document.getElementById('lockMsg').style.color = '#00d68f';
+      document.getElementById('lockMsg').textContent = '인증 성공';
+      var ls = document.getElementById('lockScreen');
+      ls.classList.add('lock-fade');
+      setTimeout(function(){
+        ls.style.display = 'none';
+        document.getElementById('mainContent').style.display = 'block';
+        loadData();
+      }, 400);
+    } else {
+      attempts++;
+      document.getElementById('lockMsg').textContent = '비밀번호가 틀렸습니다 (' + attempts + '/5)';
+      boxes.forEach(function(b){b.classList.add('error');b.value='';b.classList.remove('filled');});
+      setTimeout(function(){boxes.forEach(function(b){b.classList.remove('error');});boxes[0].focus();}, 400);
+      if(attempts >= 5){
+        document.getElementById('lockMsg').textContent = '5회 실패. 30초 후 재시도 가능';
+        boxes.forEach(function(b){b.disabled=true;});
+        setTimeout(function(){
+          attempts=0;
+          document.getElementById('lockMsg').textContent='';
+          boxes.forEach(function(b){b.disabled=false;});
+          boxes[0].focus();
+        }, 30000);
+      }
+    }
+  }
+})();
+
+// ===== 메인 데이터 로딩 =====
 var JSON_URL='./prices_new.json';
 var DATA=null;
 var currentFilter='all';
@@ -196,8 +345,8 @@ function toggleSort(type){
   if(currentSort===type){sortAsc=!sortAsc;}else{currentSort=type;sortAsc=false;}
   document.getElementById('sortDate').className='sort-btn'+(currentSort==='date'?' on':'');
   document.getElementById('sortReturn').className='sort-btn'+(currentSort==='return'?' on':'');
-  document.getElementById('sortDate').textContent='추천일'+(currentSort==='date'?(sortAsc?' ▲':' ▼'):'');
-  document.getElementById('sortReturn').textContent='수익률'+(currentSort==='return'?(sortAsc?' ▲':' ▼'):'');
+  document.getElementById('sortDate').textContent='추천일'+(currentSort==='date'?(sortAsc?' \u25B2':' \u25BC'):'');
+  document.getElementById('sortReturn').textContent='수익률'+(currentSort==='return'?(sortAsc?' \u25B2':' \u25BC'):'');
   renderTable();
 }
 
@@ -278,8 +427,6 @@ function renderTable(){
   });
   document.getElementById('tb').innerHTML=html;
 }
-
-loadData();
 </script>
 </body>
 </html>
