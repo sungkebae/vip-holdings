@@ -454,6 +454,9 @@ function renderTable(){
 }
 
 initAuth();
+
+// 5분마다 자동 갱신
+setInterval(loadData, 5 * 60 * 1000);
 </script>
 </body>
 </html>
