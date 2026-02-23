@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-02-23 16:00:33",
-  "total_count": 13,
-  "active_count": 13,
+  "updated_at": "2026-02-23 16:06:56",
+  "total_count": 12,
+  "active_count": 12,
   "holdings": [
     {
       "code": "047310",
@@ -33,22 +33,6 @@
       "sell3": "",
       "weight": "5~10%",
       "note": "3%손절이후 1회 추가매수 예정",
-      "is_active": true
-    },
-    {
-      "code": "0007C0",
-      "name": "아크릴",
-      "rec_date": "2026-02-19",
-      "buy_price": 47700,
-      "add_buy": 0,
-      "avg_price": 47700,
-      "cur_price": 44100,
-      "return_pct": -7.55,
-      "sell1": "",
-      "sell2": "",
-      "sell3": "",
-      "weight": "5~10%",
-      "note": "3%익절 이후 1회 추가매수 예정",
       "is_active": true
     },
     {
