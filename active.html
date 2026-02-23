@@ -434,6 +434,8 @@ window.addEventListener('load', function(){
     if(!DATA && document.getElementById('mainContent').style.display==='block'){
       console.log('[재시도] 데이터 로드 재시도');
       loadData();
+// 5분마다 자동 갱신
+setInterval(loadData, 5 * 60 * 1000);
     }
   }, 500);
 });
