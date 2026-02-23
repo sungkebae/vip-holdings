@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-23 15:39:04",
+  "updated_at": "2026-02-23 15:48:13",
   "total_count": 60,
   "active_count": 52,
   "holdings": [
@@ -12,10 +12,14 @@
       "avg_price": 3683,
       "cur_price": 3870,
       "return_pct": 5.08,
-      "sell_target": "3867(+5%)",
+      "sell1": "3867(+5%)",
+      "sell2": "4235(+15%)",
+      "sell3": "",
       "weight": "5~10%",
       "note": "이익실현 2회 30% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 4315,
+      "peak_return_pct": 17.16
     },
     {
       "code": "100840",
@@ -26,10 +30,14 @@
       "avg_price": 48000,
       "cur_price": 47750,
       "return_pct": -0.52,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "50% 이익실현 50% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 52200,
+      "peak_return_pct": 8.75
     },
     {
       "code": "475150",
@@ -40,10 +48,14 @@
       "avg_price": 23900,
       "cur_price": 29600,
       "return_pct": 23.85,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "33460(+40%)",
+      "sell3": "",
       "weight": "5~10%",
       "note": "50% 이익실현 30% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 34150,
+      "peak_return_pct": 42.89
     },
     {
       "code": "222420",
@@ -54,10 +66,14 @@
       "avg_price": 1520,
       "cur_price": 1368,
       "return_pct": -10.0,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "전량이익실현",
-      "is_active": false
+      "is_active": false,
+      "peak_price": 1693,
+      "peak_return_pct": 11.38
     },
     {
       "code": "024060",
@@ -68,10 +84,14 @@
       "avg_price": 14630,
       "cur_price": 22100,
       "return_pct": 51.06,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "17995(+23%)",
+      "sell3": "",
       "weight": "5~10%",
       "note": "50% 이익실현 추가이익실현 30% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 19620,
+      "peak_return_pct": 34.11
     },
     {
       "code": "045390",
@@ -82,10 +102,14 @@
       "avg_price": 4490,
       "cur_price": 4865,
       "return_pct": 8.35,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~6%",
       "note": "50% 이익실현 50% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 4900,
+      "peak_return_pct": 9.13
     },
     {
       "code": "025980",
@@ -96,10 +120,14 @@
       "avg_price": 8540,
       "cur_price": 8880,
       "return_pct": 3.98,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~6%",
       "note": "50% 이익실현 50% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 9080,
+      "peak_return_pct": 6.32
     },
     {
       "code": "226590",
@@ -110,10 +138,14 @@
       "avg_price": 18810,
       "cur_price": 27400,
       "return_pct": 45.67,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "전량이익실현",
-      "is_active": false
+      "is_active": false,
+      "peak_price": 24150,
+      "peak_return_pct": 28.39
     },
     {
       "code": "086390",
@@ -124,10 +156,14 @@
       "avg_price": 17440,
       "cur_price": 18950,
       "return_pct": 8.66,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "50% 이익실현 50% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 23700,
+      "peak_return_pct": 35.89
     },
     {
       "code": "045100",
@@ -138,10 +174,14 @@
       "avg_price": 27500,
       "cur_price": 29150,
       "return_pct": 6.0,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "50% 이익실현 50% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 30650,
+      "peak_return_pct": 11.45
     },
     {
       "code": "158430",
@@ -152,10 +192,14 @@
       "avg_price": 7560,
       "cur_price": 7730,
       "return_pct": 2.25,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "7200원 분할매수",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 8400,
+      "peak_return_pct": 11.11
     },
     {
       "code": "187660",
@@ -166,10 +210,14 @@
       "avg_price": 3225,
       "cur_price": 12060,
       "return_pct": 273.95,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "추가 3130원 30%보유중",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 10390,
+      "peak_return_pct": 222.17
     },
     {
       "code": "053610",
@@ -180,10 +228,14 @@
       "avg_price": 51650,
       "cur_price": 57300,
       "return_pct": 10.94,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "추가이익실현 30% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 62000,
+      "peak_return_pct": 20.04
     },
     {
       "code": "435570",
@@ -194,10 +246,14 @@
       "avg_price": 12670,
       "cur_price": 13650,
       "return_pct": 7.73,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "분할매수",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 14200,
+      "peak_return_pct": 12.08
     },
     {
       "code": "012210",
@@ -208,10 +264,14 @@
       "avg_price": 11600,
       "cur_price": 18060,
       "return_pct": 55.69,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "2회이익실현 40%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 20150,
+      "peak_return_pct": 73.71
     },
     {
       "code": "464490",
@@ -222,10 +282,14 @@
       "avg_price": 13864,
       "cur_price": 17300,
       "return_pct": 24.78,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "익절후 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 20300,
+      "peak_return_pct": 46.42
     },
     {
       "code": "041960",
@@ -236,10 +300,14 @@
       "avg_price": 7571,
       "cur_price": 8770,
       "return_pct": 15.84,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "익절후 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 9860,
+      "peak_return_pct": 30.23
     },
     {
       "code": "094480",
@@ -250,10 +318,14 @@
       "avg_price": 10300,
       "cur_price": 10630,
       "return_pct": 3.2,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "3%",
       "note": "3.3.4 분할매수 ~10300원 / 9600원 부근 매수",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 12250,
+      "peak_return_pct": 18.93
     },
     {
       "code": "009470",
@@ -264,10 +336,14 @@
       "avg_price": 40900,
       "cur_price": 50900,
       "return_pct": 24.45,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "익절후 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 59500,
+      "peak_return_pct": 45.48
     },
     {
       "code": "457370",
@@ -278,10 +354,14 @@
       "avg_price": 9725,
       "cur_price": 10720,
       "return_pct": 10.23,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "50% 이익실현 50% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 10880,
+      "peak_return_pct": 11.88
     },
     {
       "code": "078520",
@@ -292,10 +372,14 @@
       "avg_price": 9860,
       "cur_price": 11840,
       "return_pct": 20.08,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "9500원 추가매수 익절후 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 12410,
+      "peak_return_pct": 25.86
     },
     {
       "code": "046940",
@@ -306,10 +390,14 @@
       "avg_price": 4020,
       "cur_price": 4560,
       "return_pct": 13.43,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "익절후 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 4610,
+      "peak_return_pct": 14.68
     },
     {
       "code": "010820",
@@ -320,10 +408,14 @@
       "avg_price": 4478,
       "cur_price": 7270,
       "return_pct": 62.35,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "익절후 50%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 6870,
+      "peak_return_pct": 53.42
     },
     {
       "code": "046120",
@@ -334,10 +426,14 @@
       "avg_price": 4625,
       "cur_price": 6930,
       "return_pct": 49.84,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "1/26 추가매수",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 7600,
+      "peak_return_pct": 64.32
     },
     {
       "code": "457550",
@@ -348,10 +444,14 @@
       "avg_price": 27850,
       "cur_price": 31900,
       "return_pct": 14.54,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "1/26 추가매수 전량이익실현",
-      "is_active": false
+      "is_active": false,
+      "peak_price": 31500,
+      "peak_return_pct": 13.11
     },
     {
       "code": "491000",
@@ -362,10 +462,14 @@
       "avg_price": 60800,
       "cur_price": 85800,
       "return_pct": 41.12,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30% 보유중Y",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 90800,
+      "peak_return_pct": 49.34
     },
     {
       "code": "032820",
@@ -376,10 +480,14 @@
       "avg_price": 4150,
       "cur_price": 16940,
       "return_pct": 308.19,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "익절후 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 16180,
+      "peak_return_pct": 289.88
     },
     {
       "code": "083650",
@@ -390,10 +498,14 @@
       "avg_price": 60300,
       "cur_price": 90300,
       "return_pct": 49.75,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "익절후 50% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 90000,
+      "peak_return_pct": 49.25
     },
     {
       "code": "006910",
@@ -404,10 +516,14 @@
       "avg_price": 5730,
       "cur_price": 12360,
       "return_pct": 115.71,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 12680,
+      "peak_return_pct": 121.29
     },
     {
       "code": "017960",
@@ -418,10 +534,14 @@
       "avg_price": 35750,
       "cur_price": 40900,
       "return_pct": 14.41,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "전량이익실현",
-      "is_active": false
+      "is_active": false,
+      "peak_price": 40050,
+      "peak_return_pct": 12.03
     },
     {
       "code": "399720",
@@ -432,10 +552,14 @@
       "avg_price": 62100,
       "cur_price": 68000,
       "return_pct": 9.5,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 78000,
+      "peak_return_pct": 25.6
     },
     {
       "code": "003160",
@@ -446,10 +570,14 @@
       "avg_price": 28250,
       "cur_price": 35100,
       "return_pct": 24.25,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 41700,
+      "peak_return_pct": 47.61
     },
     {
       "code": "211270",
@@ -460,10 +588,14 @@
       "avg_price": 15222,
       "cur_price": 17340,
       "return_pct": 13.91,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 22400,
+      "peak_return_pct": 47.16
     },
     {
       "code": "298830",
@@ -474,10 +606,14 @@
       "avg_price": 8370,
       "cur_price": 8130,
       "return_pct": -2.87,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 10880,
+      "peak_return_pct": 29.99
     },
     {
       "code": "025820",
@@ -488,10 +624,14 @@
       "avg_price": 5680,
       "cur_price": 5690,
       "return_pct": 0.18,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "전량이익실현",
-      "is_active": false
+      "is_active": false,
+      "peak_price": 6550,
+      "peak_return_pct": 15.32
     },
     {
       "code": "054920",
@@ -502,10 +642,14 @@
       "avg_price": 4720,
       "cur_price": 5150,
       "return_pct": 9.11,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 6980,
+      "peak_return_pct": 47.88
     },
     {
       "code": "478340",
@@ -516,10 +660,14 @@
       "avg_price": 29829,
       "cur_price": 49750,
       "return_pct": 66.78,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "장기 보유 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 64600,
+      "peak_return_pct": 116.57
     },
     {
       "code": "067830",
@@ -530,10 +678,14 @@
       "avg_price": 3135,
       "cur_price": 3390,
       "return_pct": 8.13,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "손절처리",
-      "is_active": false
+      "is_active": false,
+      "peak_price": 3820,
+      "peak_return_pct": 21.85
     },
     {
       "code": "225190",
@@ -544,10 +696,14 @@
       "avg_price": 1319,
       "cur_price": 2260,
       "return_pct": 71.34,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "1200원 추가 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 3155,
+      "peak_return_pct": 139.2
     },
     {
       "code": "417010",
@@ -558,10 +714,14 @@
       "avg_price": 7480,
       "cur_price": 11070,
       "return_pct": 47.99,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "중장기 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 15250,
+      "peak_return_pct": 103.88
     },
     {
       "code": "010580",
@@ -572,10 +732,14 @@
       "avg_price": 2100,
       "cur_price": 2145,
       "return_pct": 2.14,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "전량이익실현",
-      "is_active": false
+      "is_active": false,
+      "peak_price": 2955,
+      "peak_return_pct": 40.71
     },
     {
       "code": "080580",
@@ -586,10 +750,14 @@
       "avg_price": 10005,
       "cur_price": 17230,
       "return_pct": 72.21,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 17255,
+      "peak_return_pct": 72.46
     },
     {
       "code": "309960",
@@ -600,10 +768,14 @@
       "avg_price": 5505,
       "cur_price": 7040,
       "return_pct": 27.88,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 7450,
+      "peak_return_pct": 35.33
     },
     {
       "code": "125020",
@@ -614,10 +786,14 @@
       "avg_price": 4142,
       "cur_price": 5880,
       "return_pct": 41.96,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "3%",
       "note": "2회 익절 30% 보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 6060,
+      "peak_return_pct": 46.31
     },
     {
       "code": "048770",
@@ -628,10 +804,14 @@
       "avg_price": 2760,
       "cur_price": 3435,
       "return_pct": 24.46,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 5180,
+      "peak_return_pct": 87.68
     },
     {
       "code": "100790",
@@ -642,10 +822,14 @@
       "avg_price": 13590,
       "cur_price": 23700,
       "return_pct": 74.39,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "11500원 추가 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 27450,
+      "peak_return_pct": 101.99
     },
     {
       "code": "000050",
@@ -656,10 +840,14 @@
       "avg_price": 9040,
       "cur_price": 10830,
       "return_pct": 19.8,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "8500원 추가 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 15210,
+      "peak_return_pct": 68.25
     },
     {
       "code": "002800",
@@ -670,10 +858,14 @@
       "avg_price": 5840,
       "cur_price": 6260,
       "return_pct": 7.19,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "전량이익실현",
-      "is_active": false
+      "is_active": false,
+      "peak_price": 6270,
+      "peak_return_pct": 7.36
     },
     {
       "code": "122690",
@@ -684,10 +876,14 @@
       "avg_price": 2225,
       "cur_price": 2820,
       "return_pct": 26.74,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 4300,
+      "peak_return_pct": 93.26
     },
     {
       "code": "007340",
@@ -698,10 +894,14 @@
       "avg_price": 25500,
       "cur_price": 31400,
       "return_pct": 23.14,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "추가 25000 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 33800,
+      "peak_return_pct": 32.55
     },
     {
       "code": "456070",
@@ -712,10 +912,14 @@
       "avg_price": 15880,
       "cur_price": 17760,
       "return_pct": 11.84,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 20950,
+      "peak_return_pct": 31.93
     },
     {
       "code": "488900",
@@ -726,10 +930,14 @@
       "avg_price": 10700,
       "cur_price": 19120,
       "return_pct": 78.69,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 31100,
+      "peak_return_pct": 190.65
     },
     {
       "code": "009070",
@@ -740,10 +948,14 @@
       "avg_price": 6630,
       "cur_price": 7570,
       "return_pct": 14.18,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 8390,
+      "peak_return_pct": 26.55
     },
     {
       "code": "038500",
@@ -754,10 +966,14 @@
       "avg_price": 5000,
       "cur_price": 15850,
       "return_pct": 217.0,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 23500,
+      "peak_return_pct": 370.0
     },
     {
       "code": "004960",
@@ -768,10 +984,14 @@
       "avg_price": 10350,
       "cur_price": 14260,
       "return_pct": 37.78,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "추가 10000원 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 14950,
+      "peak_return_pct": 44.44
     },
     {
       "code": "365270",
@@ -782,10 +1002,14 @@
       "avg_price": 6400,
       "cur_price": 16130,
       "return_pct": 152.03,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "3회 분할 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 16850,
+      "peak_return_pct": 163.28
     },
     {
       "code": "264850",
@@ -796,10 +1020,14 @@
       "avg_price": 6320,
       "cur_price": 7620,
       "return_pct": 20.57,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "눌림목 5800원 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 9450,
+      "peak_return_pct": 49.53
     },
     {
       "code": "001440",
@@ -810,10 +1038,14 @@
       "avg_price": 24000,
       "cur_price": 34300,
       "return_pct": 42.92,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "3회 분할 30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 34450,
+      "peak_return_pct": 43.54
     },
     {
       "code": "347700",
@@ -824,10 +1056,14 @@
       "avg_price": 11120,
       "cur_price": 45150,
       "return_pct": 306.03,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 54000,
+      "peak_return_pct": 385.61
     },
     {
       "code": "085910",
@@ -838,10 +1074,14 @@
       "avg_price": 7200,
       "cur_price": 16400,
       "return_pct": 127.78,
-      "sell_target": "",
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
       "weight": "5~10%",
       "note": "30%보유",
-      "is_active": true
+      "is_active": true,
+      "peak_price": 16500,
+      "peak_return_pct": 129.17
     }
   ]
 }
