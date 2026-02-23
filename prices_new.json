@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-23 16:30:23",
+  "updated_at": "2026-02-23 16:38:16",
   "total_count": 12,
   "active_count": 12,
   "holdings": [
@@ -167,11 +167,11 @@
       "code": "086450",
       "name": "동국제약",
       "rec_date": "2026-02-23",
-      "buy_price": 205550,
+      "buy_price": 20550,
       "add_buy": 0,
-      "avg_price": 205550,
+      "avg_price": 20550,
       "cur_price": 20500,
-      "return_pct": -90.03,
+      "return_pct": -0.24,
       "sell1": "",
       "sell2": "",
       "sell3": "",
