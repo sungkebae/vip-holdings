@@ -1,8 +1,26 @@
 {
-  "updated_at": "2026-02-23 16:00:31",
-  "total_count": 60,
-  "active_count": 52,
+  "updated_at": "2026-02-23 16:06:54",
+  "total_count": 61,
+  "active_count": 53,
   "holdings": [
+    {
+      "code": "0007C0",
+      "name": "아크릴",
+      "rec_date": "2026-02-19",
+      "buy_price": 47700,
+      "add_buy": 0,
+      "avg_price": 47700,
+      "cur_price": 45400,
+      "return_pct": -4.82,
+      "sell1": "",
+      "sell2": "",
+      "sell3": "",
+      "weight": "5~10%",
+      "note": "3%익절 이후 1회 추가매수 예정",
+      "is_active": true,
+      "peak_price": 51300,
+      "peak_return_pct": 7.55
+    },
     {
       "code": "267320",
       "name": "나인테크",
