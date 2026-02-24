@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-24 12:12:43",
+  "updated_at": "2026-02-24 12:15:26",
   "total_count": 12,
   "active_count": 12,
   "holdings": [
@@ -32,7 +32,7 @@
       "sell2": "",
       "sell3": "",
       "weight": "5~10%",
-      "note": "1,740원 (50%)비중축소 1회 추가매수 예정",
+      "note": "1,740원 (50%) 비중축소 1회 추가매수 예정",
       "is_active": true
     },
     {
@@ -58,13 +58,13 @@
       "buy_price": 17390,
       "add_buy": 16400,
       "avg_price": 16895,
-      "cur_price": 17910,
-      "return_pct": 6.01,
+      "cur_price": 17930,
+      "return_pct": 6.13,
       "sell1": "18000",
       "sell2": "",
       "sell3": "",
       "weight": "5~10%",
-      "note": "17,390원 종가매수 16,400원 추가매수",
+      "note": "18,000원 50% 매도",
       "is_active": true
     },
     {
@@ -96,7 +96,7 @@
       "sell2": "",
       "sell3": "",
       "weight": "5~10%",
-      "note": "단기 3~4일 / 조정시 2회 추가매수예정",
+      "note": "17,830원(신규 및 추가매수 2/24)",
       "is_active": true
     },
     {
@@ -176,23 +176,23 @@
       "sell2": "21000",
       "sell3": "",
       "weight": "5~10%",
-      "note": "2번익절 30%보유",
+      "note": "22,300원 60% 매도 → 21,000원 추가매도, 30%만 보유",
       "is_active": true
     },
     {
-      "code": "079000",
+      "code": "79000",
       "name": "와토스코리아",
       "rec_date": "2026-02-23",
       "buy_price": 11050,
       "add_buy": 0,
       "avg_price": 11050,
-      "cur_price": 10990,
-      "return_pct": -0.54,
+      "cur_price": 0,
+      "return_pct": null,
       "sell1": "11300",
       "sell2": "11200",
       "sell3": "",
       "weight": "5~10%",
-      "note": "2번익절 30%보유",
+      "note": "11,300원 50% 매도 → 11,200DNJS추가정리, 30%만 보유",
       "is_active": true
     }
   ]
