@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-13 11:04:48",
+  "updated_at": "2026-03-13 11:10:48",
   "total_count": 12,
   "active_count": 12,
   "holdings": [
@@ -42,8 +42,8 @@
       "buy_price": 7900,
       "add_buy": 7500,
       "avg_price": 7700,
-      "cur_price": 8220,
-      "return_pct": 6.75,
+      "cur_price": 8350,
+      "return_pct": 8.44,
       "sell1": "",
       "sell2": "",
       "sell3": "",
