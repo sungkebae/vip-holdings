@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14 12:20:57",
+  "updated_at": "2026-05-14 12:27:57",
   "total_count": 12,
   "active_count": 12,
   "holdings": [
@@ -26,8 +26,8 @@
       "buy_price": 1800,
       "add_buy": 0,
       "avg_price": 1800,
-      "cur_price": 2485,
-      "return_pct": 38.06,
+      "cur_price": 2520,
+      "return_pct": 40.0,
       "sell1": "",
       "sell2": "",
       "sell3": "",
@@ -122,8 +122,8 @@
       "buy_price": 55650,
       "add_buy": 0,
       "avg_price": 55650,
-      "cur_price": 40350,
-      "return_pct": -27.49,
+      "cur_price": 40250,
+      "return_pct": -27.67,
       "sell1": "",
       "sell2": "",
       "sell3": "",
